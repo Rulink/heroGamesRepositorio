@@ -154,6 +154,27 @@ header{
     color: white;
 }
 
+.novedades--animacion{
+    animation-name: animo;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 2s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes animo {
+    0%{
+        transform:scale(.5);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(.5);
+    }
+    
+}
+
 .novedades__producto{
     max-height: 770px;
     border-radius: 25px;
