@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/icons/heroGamesLogo.png">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>HG - Contacto</title>
+</head>
+
+<body>
+    <!--Mi barra de navegación-->
+    <header>
+        <a href="/index.html"><img src="/assets/icons/heroGamesLogo.png" alt="logo" class="logo" /></a>
+        <a href="/index.html"><img class="heroGames" src="/assets/icons/heroGames.png" alt="Hero Games"></a>
+        <img src="/assets/icons/Hamburger_icon.svg.png" alt="Nav button" class="botonNavegacion">
+        <section class="buscar">
+            <input type="search" placeholder="Ingresa un articulo" id="barra">
+            <button type="button" class="buscar__boton"><img src="/assets/icons/icone-loupe-gris.png" alt="Buscar" class="buscar__imagen"</button>
+        </section>
+        <ul class="seccion">
+            <a class="seccion__elemento" href="/pages/videojuegos.html"><li>Videojuegos</li></a>
+            <a class="seccion__elemento" href="/pages/juegosDeMesa.html"><li>Juegos de Mesa</li></a>
+            <a class="seccion__elemento" href="/pages/tcg.html"><li>TCG</li></a>
+            <a class="seccion__elemento" href="/pages/comicsYManga.html"><li>Comics y Manga</li></a>
+            <a class="seccion__elemento" href="/pages/coleccionables.html"><li>Coleccionables</li></a>
+        </ul>
+        <div class="otrosLinks">
+            <ul class="otrosLinks__lista">
+                <li class="otrosLinks__elemento"><a href="#">Ubicanos</a></li>
+                <li class="otrosLinks__elemento"><a href="#">Quejas y sujerencias</a></li>
+                <li class="otrosLinks__elemento"><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner2">
+            <h1 class="nombre-empresa">Hero Games</h1>
+            <form action="procesar.php" name="contacto" method="post">
+                <fieldset class="contacto">
+                    <legend>¡Cuentanos sobre ti!</legend>
+
+                    <p>
+                        <label>Nombre:
+                            <input type="text" name="nombre" placeholder="Lionel">
+                        </label>
+                    </p>
+                    <p>
+                        <label>Apellido:
+                            <input type="text" name="apellido" placeholder="Messi">
+                        </label>
+                    </p>
+                    <p>
+                        <label>Email:
+                            <input type="email" name="correo" placeholder="tucorreo@pagina.com" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label>Contraseña:
+                            <input type="password" name="contraseña">
+                        </label>
+                    </p>
+
+                    <!--Radio para una sola opcion-->
+                    <h4>Sexo</h4>
+                    <label for="sexo">Mujer</label>
+                    <input type="radio" name="sexo" value="Mujer">
+                    <label for="sexo">Hombre</label>
+                    <input type="radio" name="sexo" value="hombre">
+                    <!--Checkbox para varias opciones-->
+                    <h4>Productos de Interes</h4>
+                        <label for="tipoProducto">TCG</label>
+                        <input type="checkbox" name="tipoProducto" value="TCG">
+                        <label for="tipoProducto">Otros juegos de mesa</label>
+                        <input type="checkbox" name="tipoProducto" id="juegosDeMesa">
+                        <label for="tipoProducto">Videojuegos</label>
+                        <input type="checkbox" name="tipoProducto" id="videojuegos">
+                        <label for="tipoProducto">Comics o Manga</label>
+                        <input type="checkbox" name="tipoProducto" id="comicsManga">
+                    <!--Menu desplegable-->
+                    <h4>Marca</h4>
+                    <select name="Marcas">
+                        <option value="yugioh">Yu-Gi-Oh!</option>
+                        <option value="pokemon">Pokemon</option>
+                    </select>
+                    <h4>¡Aquí puedes dejarnos tus dudas y comentarios!</h4>
+                    <textarea name="comentarios" id="comentariosUsuarios" cols="30" rows="10"></textarea>
+                    <!--Botones-->
+                    <p>
+                        <button type="button">Enviar</button>
+                    </p>
+                    <p>
+                        <button type="reset">Borrar Formulario</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer id="pie">
+        <article>
+            <h4>Desarrollado por Raul Munguia</h4>
+            <h4></h4>
+        </article>
+        <!--Redes sociales-->
+        <article class="redes-sociales">
+            <a href="https://www.facebook.com/gaming/HeroGamesShop" target="_blank">
+                <img src="/assets/icons/redes/fb.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/rulink10/" target="_blank">
+                <img src="/assets/icons/redes/IG.png" alt="Instagram">
+            </a>
+            <a href="https://twitter.com/Rulink10" target="_blank">
+                <img src="/assets/icons/redes/TW.png" alt="Twitter">
+            </a>
+            <a href="https://www.youtube.com/channel/UCFnCqUS76YrJ9YNVRemCbWw" target="_blank">
+                <img src="/assets//icons/redes/YR_circulo.png" alt="YouTube">
+            </a>
+            <a href="https://www.twitch.tv/rulink10" target="_blank">
+                <img src="/assets/icons/redes/TTV.png" alt="Twitch">
+            </a>
+        </article>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,506 @@
+@font-face {
+    font-family: "roboto";
+    src: url(/assets/fonts/Roboto/Roboto-BlackItalic.ttf);
+}
+
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (min-width:601px) {
+
+header{
+    display: grid;
+    background-color: #004280;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    margin: 0%;
+    height: 140px;
+    align-items: center;
+    grid-template-columns: 80px 1fr 3fr 1fr;
+    grid-template-rows: repeat(2,70px);
+    grid-template-areas: 
+    "icono titulo busqueda otro"
+    "nav nav nav nav"
+    ;
+}
+
+.buscar{
+    grid-area: busqueda;
+    justify-self: center;
+}
+
+#barra{
+    font-size: 20px;
+}
+
+
+.buscar__imagen{
+    height: 20px;
+}
+
+
+.logo{
+    width: 60px;
+    margin: 0% 5px;
+    grid-area: icono;
+}
+
+.heroGames{
+    max-height: 40px;
+    grid-area: icono;
+    align-self: center;
+    justify-self: left;
+}
+
+.otrosLinks{
+    grid-area: otro;
+    display: flex;
+}
+
+.otrosLinks__lista{
+    position: absolute;
+    top: 0%;
+    right: 0cm;
+}
+
+.otrosLinks__elemento{
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: 17px;
+    color: white;
+    padding: 0px 8px;
+}
+    
+.botonNavegacion{
+    display: none;
+}
+
+.seccion{
+    display: grid;
+    grid-area: nav;
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    border-bottom: solid white 5px;
+    border-top: solid white 5px;
+    grid-template-columns: repeat(5,1fr);
+    list-style: none;
+}
+
+
+.seccion__elemento{
+    display: flex;
+    transition: 0.3s;
+    justify-content: center;
+    
+}
+
+.seccion__elemento:hover{
+    background-color: white;
+    color: #004280;
+}
+
+.seccion__elemento >*{
+    align-self:center;
+}
+
+
+.novedades{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    background-color: #004280;
+    width: 100%;
+    height: 790px;  
+    border-bottom: solid #DBFE00 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.novedades__flecha{
+    filter: invert(1);
+    height: 120px;
+    transition: all 100ms;
+}
+
+.novedades__flecha:hover{
+    filter: invert(1);
+    height: 140px;
+}
+
+.anterior{
+    transform: scaleX(-1);
+    grid-column: 1/2;
+}
+
+.siguiente{
+    grid-column: 7/8;
+}
+
+.novedades__imagenes {
+    /*background-color: aquamarine;*/
+    background-position: top;
+    background-attachment: scroll;
+    background-size: cover;
+    color: white;
+}
+
+.novedades__producto{
+    max-height: 770px;
+    border-radius: 25px;
+    grid-column: 2/7;
+}
+
+.destacados{
+    margin: 0px;
+    border-bottom: solid #DBFE00 20px;
+}
+
+    
+
+.destacados article{
+    position: relative;
+    height: 490px;
+    display: flex;
+}
+
+.destacados > *{
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.destacados__titulo{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    font-size: 35px;
+    text-align: center;
+    margin-left: 5%;
+    top: inherit;
+    color: black;
+}
+
+.destacados__imagenes{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.destacados__producto {
+    max-height: 280px;
+    max-width:  280px;
+}
+
+.producto{
+    position:relative;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 150px 490px 150px;
+
+}
+
+.videojuegos{
+    background-image: url('/assets/backgrouond/juegos/Xbox.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.tcg{
+    background-image: url('/assets/backgrouond/white_and_black_halftone_background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.producto__marcas{
+    grid-row: 2/3;
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.n1{
+    grid-column: 1/2;
+    align-self: center;
+}
+
+.n2{
+    grid-column: 2/3;
+    align-self: center;
+}
+
+.n3{
+    grid-column: 3/4;
+    align-self: center;
+}
+
+
+.producto__logo{
+    height: 300px;
+    object-fit: contain;
+    border-radius: 50px;
+    transition: all 100ms;
+}
+
+.producto__logo:hover{
+    height: 340px;
+}
+
+.banner2 {
+    width: 100%;
+    height: 835px;
+    background-image: url('/assets/backgrouond/juegos/play.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    font-family: 'roboto';
+    color: white;
+    font-weight: bold;
+    display: grid;
+    align-content: center;
+    text-align: center;  
+}
+
+.banner2 h1{
+    font-size: 50px;
+}
+
+#pie {
+    width: 100%;
+    color: #DBFE00;
+    padding: 20px 20px;
+    background-color: #004280;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.redes-sociales img {
+    max-height: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.redes-sociales img :first-of-type {
+    margin-left: 0%;
+}
+
+}
+
+@media (max-width: 600px) {
+
+    header{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 70px 50px;
+        grid-template-areas: "icono nombre boton"
+        "busqueda busqueda busqueda";
+        background-color: #004280;
+        align-items: center;
+        border-bottom: solid white 5px;
+    }
+
+    .buscar{
+        grid-area: busqueda;
+        justify-self: center;
+    }
+
+    #barra{
+        font-size: 20px;
+    }
+
+    .buscar__imagen{
+        height: 20px;
+    }
+    
+    .logo{
+        grid-area: icono;
+        height: 60px;
+        margin-left: 10px;
+    }
+    
+    .botonNavegacion{
+        grid-area: boton;
+        filter: invert(1);
+        height: 40px;
+        justify-self: right;
+        margin-right: 10px;
+    }
+
+    .heroGames{
+        grid-area: nombre;
+        height: 20px;
+        align-self: center;
+    }    
+    
+    .otrosLinks{
+        display: none;
+    }
+
+    .otrosLinks__lista{
+        display: none;
+    }
+
+    .otrosLinks__elemento{
+        display: none;
+    }
+
+    .seccion{
+        display: none;
+    
+    }
+    
+    .seccion__elemento{
+        display: none;
+    }
+    
+    .novedades{
+        display: flex;
+        border-bottom: solid #DBFE00 10px;
+        background-color: #004280;
+        justify-content: center;
+    }
+    
+    .anterior{
+        display: none;
+    }
+    
+    .siguiente{
+        display: none;
+    }
+    
+    .novedades__producto{
+        width: 100vw;
+        border-radius: 0%;
+    }
+    
+    .destacados{
+        margin: 0px;
+        border-bottom: solid #DBFE00 10px;
+    }
+    
+    
+    .destacados__titulo{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-size: 22px;
+        text-align: center;
+        color: black;
+    }
+    
+    .destacados__imagenes{
+        display: grid;
+        grid-template-rows: repeat(5,200px);
+        flex-direction: column;
+    }
+    
+    .destacados__producto {
+        max-height:  150px;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .producto{
+        position:relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .videojuegos{
+        background-image: url('/assets/backgrouond/juegos/Xbox.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .tcg{
+        background-image: url('/assets/backgrouond/white_and_black_halftone_background.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .producto__marcas{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-content: space-around;
+    }
+    
+    .producto__logo{
+        width: 321px;
+        object-fit: contain;
+        
+    }
+    
+    .banner {
+        width: 100%;
+        height: 600px;
+        background-image: url('/assets/backgrouond/juegos/Xbox.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'roboto';
+        font-weight: bold;
+        display: grid;
+        align-content: center;
+        text-align: center;    
+    }
+    
+    .banner2 {
+        width: 100%;
+        height: 575px;
+        background-image: url('/assets/backgrouond/juegos/play.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'roboto';
+        color: white;
+        font-weight: bold;
+        display: grid;
+        align-content: center;
+        text-align: center;        
+    }
+
+    .banner2 h1{
+        font-size: 40px;
+    }
+
+    #pie {
+        display: grid;
+        grid-template-areas: 
+        "texto"
+        "imagenes";
+        bottom: auto;
+        color: #DBFE00;
+        padding: 20px 20px;
+        background-color: #004280;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pie__texto{
+        grid-area: texto;
+    }
+    
+    .redes-sociales img {
+        grid-area: imagenes;
+        max-height: 30px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    
+    .redes-sociales img :first-of-type {
+        margin-left: 0%;
+    }  
+}
