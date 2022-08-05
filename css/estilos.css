@@ -33,6 +33,11 @@ header{
     ;
 }
 
+ul{
+    padding-left: 0% !important;
+    margin-bottom: 0% !important;
+}
+
 .buscar{
     grid-area: busqueda;
     justify-self: center;
@@ -129,12 +134,12 @@ header{
 .novedades__flecha{
     filter: invert(1);
     height: 120px;
-    transition: all 100ms;
+    transition: all 150ms;
 }
 
 .novedades__flecha:hover{
     filter: invert(1);
-    height: 140px;
+    height: 150px;
 }
 
 .anterior{
@@ -157,9 +162,9 @@ header{
 .novedades--animacion{
     animation-name: animo;
     animation-duration: 3s;
-    animation-timing-function: ease-out;
-    animation-delay: 2s;
-    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
 }
 
 @keyframes animo {
@@ -289,10 +294,6 @@ header{
     display: grid;
     align-content: center;
     text-align: center;  
-}
-
-.banner2 h1{
-    font-size: 50px;
 }
 
 #pie {
