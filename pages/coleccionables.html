@@ -7,33 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/assets/icons/heroGamesLogo.png">
     <link rel="stylesheet" href="/css/estilos.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
     <title>HG - Videojuegos</title>
 </head>
 
 <body>
     <!--Mi barra de navegación-->
     <header>
-        <a href="/index.html"><img src="/assets/icons/heroGamesLogo.png" alt="logo" class="logo" /></a>
-        <a href="/index.html"><img class="heroGames" src="/assets/icons/heroGames.png" alt="Hero Games"></a>
-        <img src="/assets/icons/Hamburger_icon.svg.png" alt="Nav button" class="botonNavegacion">
-        <section class="buscar">
-            <input type="search" placeholder="Ingresa un articulo" id="barra">
-            <button type="button" class="buscar__boton"><img src="/assets/icons/icone-loupe-gris.png" alt="Buscar" class="buscar__imagen"</button>
-        </section>
-        <ul class="seccion">
-            <a class="seccion__elemento" href="/pages/videojuegos.html"><li>Videojuegos</li></a>
-            <a class="seccion__elemento" href="/pages/juegosDeMesa.html"><li>Juegos de Mesa</li></a>
-            <a class="seccion__elemento" href="/pages/tcg.html"><li>TCG</li></a>
-            <a class="seccion__elemento" href="/pages/comicsYManga.html"><li>Comics y Manga</li></a>
-            <a class="seccion__elemento" href="/pages/coleccionables.html"><li>Coleccionables</li></a>
-        </ul>
-        <div class="otrosLinks">
-            <ul class="otrosLinks__lista">
-                <li class="otrosLinks__elemento"><a href="#">Ubicanos</a></li>
-                <li class="otrosLinks__elemento"><a href="#">Quejas y sujerencias</a></li>
-                <li class="otrosLinks__elemento"><a href="/pages/contacto.html">Contacto</a></li>
-            </ul>
-        </div>
+        <nav class="navbar navbar-expand-lg bg-light fondo">
+            <div class="container-fluid ">
+                <section class="topPage">
+                    <a class="navbar-brand" href="/index.html"><img src="/assets/icons/heroGamesLogo.png" alt="logo"
+                            class="logo" /></a>
+                    <a class="navbar-brand" href="/index.html"><img class="heroGames" src="/assets/icons/heroGames.png"
+                            alt="Hero Games"></a>
+                    <button class="navbar-toggler invertir" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </section>
+                <div class="collapse navbar-collapse navbar-other" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <a class="nav-link active nav__element " aria-current="page" href="/pages/videojuegos.html">
+                            <li class="nav-item texto sm-blanco">Videojuegos</li>
+                        </a>
+                        <a class="nav-link active nav__element" aria-current="page" href="/pages/juegosDeMesa.html">
+                            <li class="nav-item texto sm-blanco">Juegos de Mesa</li>
+                        </a>
+                        <a class="nav-link active nav__element" aria-current="page" href="/pages/tcg.html">
+                            <li class="nav-item texto sm-blanco">TCG</li>
+                        </a>
+                        <a class="nav-link active nav__element" aria-current="page" href="/pages/comicsYManga.html">
+                            <li class="nav-item texto sm-blanco">Comics y Manga</li>
+                        </a>
+                        <a class="nav-link active nav__element" aria-current="page" href="/pages/coleccionables.html">
+                            <li class="nav-item texto sm-blanco">Coleccionables</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -80,6 +95,7 @@
             </a>
         </article>
     </footer>
+    <script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

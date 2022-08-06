@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--bootstrap-->
     <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
-    <!--icono marca-->    
+    <!--icono marca-->
     <link rel="shortcut icon" href="/assets/icons/heroGamesLogo.png">
     <!--Hoja de Estilos de manera externa-->
     <link rel="stylesheet" href="/css/estilos.css" />
@@ -18,57 +18,116 @@
 <body>
     <!--Mi barra de navegación-->
 
-    <header>
-        <a href="/index.html"><img src="/assets/icons/heroGamesLogo.png" alt="logo" class="logo" /></a>
-        <a href="/index.html"><img class="heroGames" src="/assets/icons/heroGames.png" alt="Hero Games"></a>
-        <img src="/assets/icons/Hamburger_icon.svg.png" alt="Nav button" class="botonNavegacion">
-        <section class="buscar">
-            <input type="search" placeholder="Ingresa un articulo" id="barra">
-            <button type="button" class="buscar__boton"><img src="/assets/icons/icone-loupe-gris.png" alt="Buscar" class="buscar__imagen"</button>
-        </section>
-        <ul class="seccion">
-            <a class="seccion__elemento" href="/pages/videojuegos.html"><li>Videojuegos</li></a>
-            <a class="seccion__elemento" href="/pages/juegosDeMesa.html"><li>Juegos de Mesa</li></a>
-            <a class="seccion__elemento" href="/pages/tcg.html"><li>TCG</li></a>
-            <a class="seccion__elemento" href="/pages/comicsYManga.html"><li>Comics y Manga</li></a>
-            <a class="seccion__elemento" href="/pages/coleccionables.html"><li>Coleccionables</li></a>
-        </ul>
-        <div class="otrosLinks">
-            <ul class="otrosLinks__lista">
-                <li class="otrosLinks__elemento"><a href="#">Ubicanos</a></li>
-                <li class="otrosLinks__elemento"><a href="#">Quejas y sujerencias</a></li>
-                <li class="otrosLinks__elemento"><a href="/pages/contacto.html">Contacto</a></li>
-            </ul>
-        </div>
+    <header class="fondo">
+        <!--<nav class="navbar-nav container-fluid">
+            <div class="row"> 
+                <div class="container-fluid col-md-3">
+                    <a href="/index.html" class=""><img src="/assets/icons/heroGamesLogo.png" alt="logo" 
+                    class="logo" /></a>
+                    <a href="/index.html"><img class="heroGames" src="/assets/icons/heroGames.png" alt="Hero Games"></a>
+                </div>
+                <div class="container-fluid col-md-6">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Ingresa un articulo">
+                        <button type="submit" class="btn btn-light buscar__boton col-md-1"><img src="/assets/icons/icone-loupe-gris.png" alt="Buscar" class="buscar__imagen"</button>
+                    </form>
+                </div>
+                <div class="container-fluid otrosLinks col-md-3">
+                    <ul class="otrosLinks__lista">
+                        <li class="otrosLinks__elemento"><a href="#">Ubicanos</a></li>
+                        <li class="otrosLinks__elemento"><a href="#">Quejas y sujerencias</a></li>
+                        <li class="otrosLinks__elemento"><a href="/pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <ul class=" nav nav-pills nav-justified seccion">
+                    <a class="nav-link active nav__element" aria-current="page"href="/pages/videojuegos.html"><li class="nav-item texto">Videojuegos</li></a>
+                    <a class="nav-link active nav__element" aria-current="page"href="/pages/juegosDeMesa.html"><li class="nav-item texto">Juegos de Mesa</li></a>
+                    <a class="nav-link active nav__element" aria-current="page"href="/pages/tcg.html"><li class="nav-item texto">TCG</li></a>
+                    <a class="nav-link active nav__element" aria-current="page"href="/pages/comicsYManga.html"><li class="nav-item texto">Comics y Manga</li></a>
+                    <a class="nav-link active nav__element" aria-current="page"href="/pages/coleccionables.html"><li class="nav-item texto">Coleccionables</li></a>
+                </ul>
+            </div>
+
+        </nav>-->
+        <nav class="navbar navbar-expand-lg bg-light fondo">
+            <div class="container-fluid ">
+                <section class="topPage">
+                    <a class="navbar-brand" href="#"><img src="/assets/icons/heroGamesLogo.png" alt="logo"
+                            class="logo" /></a>
+                    <a class="navbar-brand" href="#"><img class="heroGames" src="/assets/icons/heroGames.png"
+                            alt="Hero Games"></a>
+                    <button class="navbar-toggler invertir" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </section>
+                <!--<section>
+                    <form class="d-flex search" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </section>-->
+                <div class="collapse navbar-collapse navbar-other" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <a class="nav-link active nav__element " aria-current="page" href="/pages/videojuegos.html">
+                            <li class="nav-item texto sm-blanco">Videojuegos</li>
+                        </a>
+                        <a class="nav-link active nav__element" aria-current="page" href="/pages/juegosDeMesa.html">
+                            <li class="nav-item texto sm-blanco">Juegos de Mesa</li>
+                        </a>
+                        <a class="nav-link active nav__element" aria-current="page" href="/pages/tcg.html">
+                            <li class="nav-item texto sm-blanco">TCG</li>
+                        </a>
+                        <a class="nav-link active nav__element" aria-current="page" href="/pages/comicsYManga.html">
+                            <li class="nav-item texto sm-blanco">Comics y Manga</li>
+                        </a>
+                        <a class="nav-link active nav__element" aria-current="page" href="/pages/coleccionables.html">
+                            <li class="nav-item texto sm-blanco">Coleccionables</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
 
     <main>
-            <!--Hipervínculos a mis distintas páginas web-->
-            
+        <!--Hipervínculos a mis distintas páginas web-->
+
 
         <section class="novedades">
-                <img src="/assets/icons/flecha-negra.png" alt="anterior" class="novedades__flecha anterior">
-                <img class="novedades__producto novedades--animacion" src="/assets/backgrouond/juegos/MarioRabbids2.jpg"
-                    alt="Mario Strikers">
-                <img src="/assets/icons/flecha-negra.png" alt="siguiente" class="novedades__flecha siguiente">
+            <img src="/assets/icons/flecha-negra.png" alt="anterior" class="novedades__flecha anterior novedades--derecha">
+            <img class="novedades__producto novedades--animacion" src="/assets/backgrouond/juegos/MarioRabbids2.jpg"
+                alt="Mario Strikers">
+            <img src="/assets/icons/flecha-negra.png" alt="siguiente" class="novedades__flecha siguiente novedades--izquierda">
         </section>
 
         <section class="destacados">
             <article>
-                <a href="./pages/videojuegos.html"><h3 class="destacados__titulo">
-                    Consolas y videojuegos más vendidos
-                </h3></a>
+                <a href="./pages/videojuegos.html">
+                    <h3 class="destacados__titulo">
+                        Consolas y videojuegos más vendidos
+                    </h3>
+                </a>
                 <section class="destacados__imagenes">
-                    <img src="/assets/img/videojuegos/juegos/coverBTOW.jpg" alt="Zelda BTOW" class="destacados__producto" />
-                    <img src="/assets/img/videojuegos/consolas/NSO.jpg" alt="Nintendo Switch OLED Blanca" class="destacados__producto" />
-                    <img class="destacados__producto" src="/assets/img/videojuegos/juegos/MarioStrikers.jpg" alt="Mario Strik">
-                    <img class="destacados__producto" src="/assets/img/videojuegos/consolas/seriesX.jpg"  alt="Series X">
-                    <img class="destacados__producto" src="/assets/img/videojuegos/consolas/play5.jpg" alt="Playstation 5">
+                    <img src="/assets/img/videojuegos/juegos/coverBTOW.jpg" alt="Zelda BTOW"
+                        class="destacados__producto" />
+                    <img src="/assets/img/videojuegos/consolas/NSO.jpg" alt="Nintendo Switch OLED Blanca"
+                        class="destacados__producto" />
+                    <img class="destacados__producto" src="/assets/img/videojuegos/juegos/MarioStrikers.jpg"
+                        alt="Mario Strik">
+                    <img class="destacados__producto" src="/assets/img/videojuegos/consolas/seriesX.jpg" alt="Series X">
+                    <img class="destacados__producto" src="/assets/img/videojuegos/consolas/play5.jpg"
+                        alt="Playstation 5">
                 </section>
             </article>
             <article>
-                <a href="./pages/juegosDeMesa.html"><h3 class="destacados__titulo">Juegos de Mesa más vendidos</h3></a>
+                <a href="./pages/juegosDeMesa.html">
+                    <h3 class="destacados__titulo">Juegos de Mesa más vendidos</h3>
+                </a>
                 <section class="destacados__imagenes">
                     <img class="destacados__producto" src="/assets/img/juegosDeMesa/dobble.jpg" alt="Dobble">
                     <img class="destacados__producto" src="/assets/img/juegosDeMesa/unoFlip.jpg" alt="Uno flip">
@@ -79,34 +138,50 @@
                 </section>
             </article>
             <article>
-                <a href="./pages/tcg.html"><h3 class="destacados__titulo">Productos TCG y expansiones más vendidas</h3></a>
+                <a href="./pages/tcg.html">
+                    <h3 class="destacados__titulo">Productos TCG y expansiones más vendidas</h3>
+                </a>
                 <section class="destacados__imagenes">
                     <img src="assets/img/tcg/battleOCH.jpg" alt="Battle of Chaos" class="destacados__producto" />
-                    <img src="assets/img/tcg/structureAlbazStrike.jpg" alt="Structure Deck: Albaz Strike" class="destacados__producto" />
+                    <img src="assets/img/tcg/structureAlbazStrike.jpg" alt="Structure Deck: Albaz Strike"
+                        class="destacados__producto" />
                     <img class="destacados__producto" src="/assets/img/tcg/yugiohLegendaryDuelistsSeason3.png" alt="">
                     <img class="destacados__producto" src="/assets/img/tcg/yugiohMaximumGoldElDorado.png"
                         alt="Yu-Gi-Oh: Maximum Gold El Dorado">
-                    <img class="destacados__producto" src="/assets/img/tcg/pokemon/lucario.jpg" alt="Lucario Structure Deck">
+                    <img class="destacados__producto" src="/assets/img/tcg/pokemon/lucario.jpg"
+                        alt="Lucario Structure Deck">
 
                 </section>
             </article>
             <article>
-                <a href="./pages/comicsYManga.html"><h3 class="destacados__titulo">Cómics y Mangas más vendidos</h3></a>
+                <a href="./pages/comicsYManga.html">
+                    <h3 class="destacados__titulo">Cómics y Mangas más vendidos</h3>
+                </a>
                 <section class="destacados__imagenes">
-                    <img class="destacados__producto" src="/assets/img/mangasComics/manga/boxDBZ1.webp" alt="Boxset Dragon Ball Z 1">
-                    <img class="destacados__producto" src="/assets/img/mangasComics/manga/boxDBZ2.webp" alt="Boxset Dragon Ball Z 2">
-                    <img class="destacados__producto" src="/assets/img/mangasComics/manga/boxsetNaruto.jpg" alt="Boxset Naruto 2">
-                    <img class="destacados__producto" src="/assets/img/mangasComics/manga/boxsetOnePiece1.jpg" alt="Boxset One Piece 1">
+                    <img class="destacados__producto" src="/assets/img/mangasComics/manga/boxDBZ1.webp"
+                        alt="Boxset Dragon Ball Z 1">
+                    <img class="destacados__producto" src="/assets/img/mangasComics/manga/boxDBZ2.webp"
+                        alt="Boxset Dragon Ball Z 2">
+                    <img class="destacados__producto" src="/assets/img/mangasComics/manga/boxsetNaruto.jpg"
+                        alt="Boxset Naruto 2">
+                    <img class="destacados__producto" src="/assets/img/mangasComics/manga/boxsetOnePiece1.jpg"
+                        alt="Boxset One Piece 1">
                     <img class="destacados__producto" src="/assets/img/mangasComics/manga/boxsetSeven.jpg"
                         alt="Boxset Seven Deadly Sins">
             </article>
             <article>
-                <a href="./pages/coleccionables.html"><h3 class="destacados__titulo">Coleccionables más vendidos</h3></a>
+                <a href="./pages/coleccionables.html">
+                    <h3 class="destacados__titulo">Coleccionables más vendidos</h3>
+                </a>
                 <section class="destacados__imagenes">
-                    <img class="destacados__producto" src="/assets/img/coleccionables/amiibo/ivysaur.jpg" alt="Amiibo Ivysaur">
-                    <img class="destacados__producto" src="/assets/img/coleccionables/amiibo/kirbySmash.jpg" alt="Amiibo Kirby Smash">
-                    <img class="destacados__producto" src="/assets/img/coleccionables/amiibo/squirtle.jpg" alt="Amiibo squirtle">
-                    <img class="destacados__producto" src="/assets/img/coleccionables/amiibo/yarnYoshiRosa.jpg" alt="Amiibo yarn Yoshi Rosa">
+                    <img class="destacados__producto" src="/assets/img/coleccionables/amiibo/ivysaur.jpg"
+                        alt="Amiibo Ivysaur">
+                    <img class="destacados__producto" src="/assets/img/coleccionables/amiibo/kirbySmash.jpg"
+                        alt="Amiibo Kirby Smash">
+                    <img class="destacados__producto" src="/assets/img/coleccionables/amiibo/squirtle.jpg"
+                        alt="Amiibo squirtle">
+                    <img class="destacados__producto" src="/assets/img/coleccionables/amiibo/yarnYoshiRosa.jpg"
+                        alt="Amiibo yarn Yoshi Rosa">
                     <img class="destacados__producto" src="/assets/img/coleccionables/amiibo/zeldaLoftwing.jpg"
                         alt="Amiibo Zelda y Loftwing">
             </article>
@@ -139,7 +214,7 @@
     </footer>
 
     <script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
+
 </body>
 
 </html>
