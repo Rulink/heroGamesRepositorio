@@ -36,58 +36,81 @@ a {
 }
 
 
+/****************** COMPUTADORAS Y LAPTOPS GRANDES********************/
 
+@media (min-width:1280px) {
 
-@media (min-width:991px) {
+    header{
+        max-width: 100vw;
+    }
 
-    /*header {
-        /*grid-template-areas: 
-    "icono titulo busqueda otro"
-    "nav nav nav nav"
-    ;
-    }*/
-
-    /*ul{
-    padding-left: 0% !important;
-    margin-bottom: 0% !important;
-}*/
-    
-    nav{
+    nav {
         border-bottom: solid white 5px;
-        border-top: solid white 5px;
-            
+        border-left: 0ch !important;
+        border-right: 0ch !important;
     }
 
-    .navbar-nav {
+    .topPage{
         display: grid;
-        padding-right: 0%;
-        grid-template-columns: repeat(5, 1fr);
-        padding: 0 0;
-
+        grid-template-rows: repeat(2,auto);
     }
 
-    .container {
-        padding: 0% 0% 0 !important;
-        border: 0 0 0 0;
+    .topPage__button{
+        display: none;
+    }
 
+    .navbar{
+        padding: 0 0;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .topPage__Up{
+        display: grid;
+        grid-template-columns: repeat(11,1fr);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .topPage__Down{
+        grid-row: 2/3;
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
+
+    .brand{
+        grid-column: 1/4;
+        display: block;
+    }
+
+    .search{
+        padding-right: 1%;
+        grid-column: 4/10;
+        justify-self: center;
+        width: 90%;
     }
 
 
     .logo {
-        width: 60px;
-        margin: 0% 5px;
-        /*grid-area: icono;*/
+        width: 18%;
+        padding-left: 2%;
     }
 
     .heroGames {
-        height: 2.5vw;
-        /*grid-area: icono;*/
+        width: 70%;
     }
 
-    /*.otrosLinks{
+    #navbarNavDropdown{
+        margin-top: 1%;
+        border-top: solid white 5px;
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
+
+    .otrosLinks{
     grid-area: otro;
     display: flex;
-}*/
+}
 
     .otrosLinks__lista {
         position: absolute;
@@ -109,15 +132,10 @@ a {
     }
 
     .seccion {
-        display: grid;
-        grid-area: nav;
-        height: 100%;
+        display: grid !important;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 30px;
-        border-bottom: solid white 5px;
-        border-top: solid white 5px;
         grid-template-columns: repeat(5, 1fr);
-        list-style: none;
     }
 
 
@@ -127,7 +145,7 @@ a {
         justify-content: center;
         color: white !important;
         text-align: center;
-        font-size: 3vh;
+        font-size: 1.5vw;
 
     }
 
@@ -145,8 +163,6 @@ a {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         background-color: #004280;
-        width: 100%;
-        height: 790px;
         border-bottom: solid #DBFE00 20px;
         justify-items: center;
         align-items: center;
@@ -154,13 +170,13 @@ a {
 
     .novedades__flecha {
         filter: invert(1);
-        height: 120px;
+        width: 50%;
         transition: all 150ms;
     }
 
     .novedades__flecha:hover {
         filter: invert(1);
-        height: 150px;
+        width: 80%;
     }
 
     .anterior {
@@ -177,6 +193,7 @@ a {
         background-attachment: scroll;
         background-size: cover;
         color: white;
+        width: 100%;
     }
 
     .novedades--animacion {
@@ -186,6 +203,7 @@ a {
         animation-delay: 0.5s;
         animation-iteration-count: 1;
     }
+    
 
     @keyframes crecer {
         0% {
@@ -211,17 +229,16 @@ a {
 
     @keyframes derecha {
         0% {
-            transform: translate(5%) rotate(180deg);
+            transform: translate(-5%);
         }
 
         50% {
-            transform: translate(-5%) rotate(180deg);
+            transform: translate(5%);
         }
 
         100% {
-            transform: translate(5%) rotate(180deg);
+            transform: translate(-5%);
         }
-
     }
 
     .novedades--izquierda {
@@ -233,16 +250,18 @@ a {
 
     @keyframes izquierda {
         0% {
-            transform: translate(-5%);
+            transform: translate(5%) rotate(180deg);
         }
 
         50% {
-            transform: translate(5%);
+            transform: translate(-5%) rotate(180deg);
         }
 
         100% {
-            transform: translate(-5%);
+            transform: translate(5%) rotate(180deg);
         }
+
+    
 
     }
 
@@ -293,9 +312,9 @@ a {
 
     .producto {
         position: relative;
-        width: 100%;
         display: grid;
-        grid-template-rows: 150px 490px 150px;
+        grid-template-rows: 15% 70% 15%;
+        height: 80vh;
 
     }
 
@@ -336,14 +355,14 @@ a {
 
 
     .producto__logo {
-        height: 300px;
+        width: 85%;
         object-fit: contain;
         border-radius: 50px;
         transition: all 100ms;
     }
 
     .producto__logo:hover {
-        height: 340px;
+        width: 98%;
     }
 
     .banner2 {
@@ -384,79 +403,441 @@ a {
     }
 }
 
-@media (max-width: 991px) {
+
+/************ COMPUTADORAS PEQUEÑAS *************************/
+
+
+@media (max-width: 1279px) and (min-width:992px) {
+
+    header{
+        max-width: 100vw;
+    }
+
+    nav {
+        border-bottom: solid white 5px;
+        border-left: 0ch !important;
+        border-right: 0ch !important;
+    }
+
+    .topPage{
+        display: grid;
+        grid-template-rows: repeat(2,auto);
+    }
+
+    .topPage__button{
+        display: none;
+    }
+
+    .navbar{
+        padding: 0 0;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .topPage__Up{
+        display: grid;
+        grid-template-columns: repeat(11,1fr);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .topPage__Down{
+        grid-row: 2/3;
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
+
+    .brand{
+        grid-column: 1/4;
+        display: block;
+    }
+
+    .search{
+        padding-right: 1%;
+        grid-column: 4/10;
+        justify-self: center;
+        width: 90%;
+    }
+
+
+    .logo {
+        width: 18%;
+        padding-left: 2%;
+    }
+
+    .heroGames {
+        width: 70%;
+    }
+
+    #navbarNavDropdown{
+        margin-top: 1%;
+        border-top: solid white 5px;
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
+
+    .otrosLinks{
+    grid-area: otro;
+    display: flex;
+}
+
+    .otrosLinks__lista {
+        position: absolute;
+        top: 0%;
+        right: 0cm;
+    }
+
+    .otrosLinks__elemento {
+        display: inline-block;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        font-size: 17px;
+        color: white;
+        padding: 0px 8px;
+    }
+
+    .botonNavegacion {
+        display: none;
+    }
+
+    .seccion {
+        display: grid !important;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 30px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+
+    .nav__element {
+        display: flex;
+        transition: 0.3s;
+        justify-content: center;
+        color: white !important;
+        text-align: center;
+        font-size: 1.5vw;
+
+    }
+
+    .nav__element:hover {
+        background-color: white;
+        color: #004280 !important;
+    }
+
+    .seccion__elemento>* {
+        align-self: center;
+    }
+
+
+    .novedades {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        background-color: #004280;
+        border-bottom: solid #DBFE00 20px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .novedades__flecha {
+        filter: invert(1);
+        width: 50%;
+        transition: all 150ms;
+    }
+
+    .novedades__flecha:hover {
+        filter: invert(1);
+        width: 80%;
+    }
+
+    .anterior {
+        grid-column: 1/2;
+    }
+
+    .siguiente {
+        grid-column: 7/8;
+    }
+
+    .novedades__imagenes {
+        /*background-color: aquamarine;*/
+        background-position: top;
+        background-attachment: scroll;
+        background-size: cover;
+        color: white;
+        width: 100%;
+    }
+
+    .novedades--animacion {
+        animation-name: crecer;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        animation-delay: 0.5s;
+        animation-iteration-count: 1;
+    }
+    
+
+    @keyframes crecer {
+        0% {
+            transform: scale(0);
+        }
+
+        70% {
+            transform: scale(1.2);
+        }
+
+        100% {
+            transform: scaleX(1);
+        }
+
+    }
+
+    .novedades--derecha {
+        animation-name: derecha;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes derecha {
+        0% {
+            transform: translate(-5%);
+        }
+
+        50% {
+            transform: translate(5%);
+        }
+
+        100% {
+            transform: translate(-5%);
+        }
+    }
+
+    .novedades--izquierda {
+        animation-name: izquierda;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes izquierda {
+        0% {
+            transform: translate(5%) rotate(180deg);
+        }
+
+        50% {
+            transform: translate(-5%) rotate(180deg);
+        }
+
+        100% {
+            transform: translate(5%) rotate(180deg);
+        }
+
+    
+
+    }
+
+    .novedades__producto {
+        max-width: 100%;
+        border-radius: 25px;
+        grid-column: 2/7;
+    }
+
+    .destacados {
+        margin: 0px;
+        border-bottom: solid #DBFE00 20px;
+    }
+
+
+
+    .destacados article {
+        position: relative;
+        height: 490px;
+        display: flex;
+    }
+
+    .destacados>* {
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .destacados__titulo {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-size: 35px;
+        text-align: center;
+        margin-left: 5%;
+        top: inherit;
+        color: black;
+    }
+
+    .destacados__imagenes {
+        display: flex;
+        justify-content: space-around;
+        align-content: space-between;
+    }
+
+    .destacados__producto {
+        max-height: 280px;
+        max-width: 280px;
+    }
+
+    .producto {
+        position: relative;
+        display: grid;
+        grid-template-rows: 15% 70% 15%;
+        height: 80vh;
+
+    }
+
+    .videojuegos {
+        background-image: url('/assets/backgrouond/juegos/Xbox.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .tcg {
+        background-image: url('/assets/backgrouond/white_and_black_halftone_background.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .producto__marcas {
+        grid-row: 2/3;
+        display: grid;
+        align-self: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+
+    .n1 {
+        grid-column: 1/2;
+        align-self: center;
+    }
+
+    .n2 {
+        grid-column: 2/3;
+        align-self: center;
+    }
+
+    .n3 {
+        grid-column: 3/4;
+        align-self: center;
+    }
+
+
+    .producto__logo {
+        width: 85%;
+        object-fit: contain;
+        border-radius: 50px;
+        transition: all 100ms;
+    }
+
+    .producto__logo:hover {
+        width: 98%;
+    }
+
+    .banner2 {
+        width: 100%;
+        height: 835px;
+        background-image: url('/assets/backgrouond/juegos/play.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+        font-family: 'roboto';
+        color: white;
+        font-weight: bold;
+        display: grid;
+        align-content: center;
+        text-align: center;
+    }
+
+    #pie {
+        width: 100%;
+        color: #DBFE00;
+        padding: 20px 20px;
+        background-color: #004280;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .redes-sociales img {
+        max-height: 30px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .redes-sociales img :first-of-type {
+        margin-left: 0%;
+    }
+}
+
+
+
+/************ TABLETS GRANDES *************************/
+
+
+
+@media (max-width: 991px) and (min-width:768px) {
+
+    .menu__texto{
+        font-size: 3vw;
+        text-align: center;
+        border-bottom:solid gainsboro 1px;
+        padding-top: 5px;
+    }
+
+    .menu__borde{
+        border-bottom:solid gainsboro 3px;
+    }
 
     nav{
-        border-bottom: solid white 5px;
         border-top: solid white 5px;
-
+        border-bottom: solid white 5px;
+        border-left: 0ch !important;
+        border-right: 0ch !important;
+        margin: 0 0;
     }
 
-    footer{
-        border-top: solid white 5px;
+    .topPage{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 2%;
+        padding-right: 2%;
     }
-    /*header{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 70px 50px;
-        grid-template-areas: "icono nombre boton"
-        "busqueda busqueda busqueda";
-        background-color: #004280;
-        align-items: center;
-        border-bottom: solid white 5px;
-    }*/
+
+    .topPage__button{
+        display: flex;
+        justify-content: center;
+    }
+
+    .brand{
+        display: flex;
+        justify-content: center;
+    }
+
     .sm-blanco {
         color: white;
     }
 
-    .topPage {
-        display: flex;
-        justify-content: space-between !important;
-        align-items: center;
-        width: 100vw;
-    }
+
 
     .search {
         padding-top: 1%;
+        padding-bottom: 1%;
         justify-items: center !important;
         align-items: center;
-        width: 80vw;
-    }
-
-    .buscar {
-        grid-area: busqueda;
-        justify-self: center;
-    }
-
-    #barra {
-        font-size: 20px;
-    }
-
-    .buscar__imagen {
-        height: 20px;
+        width: 95vw;
     }
 
     .logo {
-        grid-area: icono;
-        height: 60px;
-        margin-left: 10px;
+        width: 7vw;
+        padding-top: 1%;
     }
 
-    .botonNavegacion {
-        grid-area: boton;
-        filter: invert(1);
-        height: 40px;
-        justify-self: right;
-        margin-right: 10px;
-    }
-
-    /*.heroGames{
-        grid-area: nombre;
-        max-width: 20%;
-        align-self: center;
-    }    */
     .heroGames {
-        width: 40vw;
+        width: 50vw;
+        padding-top: 1%;
     }
 
     .otrosLinks {
@@ -471,14 +852,6 @@ a {
         display: none;
     }
 
-    .seccion {
-        display: none;
-
-    }
-
-    .seccion__elemento {
-        display: none;
-    }
 
     .novedades {
         display: flex;
@@ -501,7 +874,7 @@ a {
     }
 
     .destacados {
-        margin: 0px;
+        padding-top: 2%;
         border-bottom: solid #DBFE00 10px;
     }
 
@@ -526,13 +899,6 @@ a {
         justify-self: center;
     }
 
-    .producto {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
     .videojuegos {
         background-image: url('/assets/backgrouond/juegos/Xbox.jpg');
         background-size: cover;
@@ -553,27 +919,14 @@ a {
     }
 
     .producto__logo {
-        width: 321px;
+        width: 100vw;
         object-fit: contain;
 
     }
 
-    .banner {
-        width: 100%;
-        height: 600px;
-        background-image: url('/assets/backgrouond/juegos/Xbox.jpg');
-        background-size: cover;
-        background-attachment: fixed;
-        font-family: 'roboto';
-        font-weight: bold;
-        display: grid;
-        align-content: center;
-        text-align: center;
-    }
-
     .banner2 {
         width: 100%;
-        height: 575px;
+        height: 100vh;
         background-image: url('/assets/backgrouond/juegos/play.jpg');
         background-size: cover;
         background-repeat: no-repeat;
@@ -596,17 +949,23 @@ a {
             "texto"
             "imagenes";
         bottom: auto;
-        color: #DBFE00;
+        color: white;
         padding: 20px 20px;
         background-color: #004280;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-style: italic;
         justify-content: center;
         align-items: center;
+        border-top: solid #DBFE00 5px;
     }
 
     .pie__texto {
         grid-area: texto;
+    }
+
+    .redes-sociales{
+        display: flex;
+        justify-content: center;
     }
 
     .redes-sociales img {
@@ -619,4 +978,423 @@ a {
     .redes-sociales img :first-of-type {
         margin-left: 0%;
     }
+   
+}
+
+
+
+/************ TABLETS Y CELULARES GRANDES*************************/
+
+
+
+@media (max-width: 767px) and (min-width:577PX) {
+
+    .menu__texto{
+        font-size: 3vw;
+        text-align: center;
+        border-bottom:solid gainsboro 1px;
+        padding-top: 5px;
+    }
+
+    .menu__borde{
+        border-bottom:solid gainsboro 3px;
+    }
+
+    nav{
+        border-top: solid white 5px;
+        border-bottom: solid white 5px;
+        border-left: 0ch !important;
+        border-right: 0ch !important;
+        margin: 0 0;
+    }
+
+    .topPage{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .topPage__button{
+        display: flex;
+        justify-content: center;
+    }
+
+    .brand{
+        display: flex;
+        justify-content: center;
+    }
+
+    .sm-blanco {
+        color: white;
+    }
+
+
+
+    .search {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        justify-items: center !important;
+        align-items: center;
+        width: 95vw;
+    }
+
+    .logo {
+        width: 7vw;
+        padding-top: 1%;
+    }
+
+    .heroGames {
+        width: 50vw;
+        padding-top: 1%;
+    }
+
+    .otrosLinks {
+        display: none;
+    }
+
+    .otrosLinks__lista {
+        display: none;
+    }
+
+    .otrosLinks__elemento {
+        display: none;
+    }
+
+
+    .novedades {
+        display: flex;
+        border-bottom: solid #DBFE00 10px;
+        background-color: #004280;
+        justify-content: center;
+    }
+
+    .anterior {
+        display: none;
+    }
+
+    .siguiente {
+        display: none;
+    }
+
+    .novedades__producto {
+        width: 100vw;
+        border-radius: 0%;
+    }
+
+    .destacados {
+        padding-top: 2%;
+        border-bottom: solid #DBFE00 10px;
+    }
+
+
+    .destacados__titulo {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-size: 22px;
+        text-align: center;
+        color: black;
+    }
+
+    .destacados__imagenes {
+        display: grid;
+        grid-template-rows: repeat(5, 200px);
+        flex-direction: column;
+    }
+
+    .destacados__producto {
+        max-height: 150px;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .videojuegos {
+        background-image: url('/assets/backgrouond/juegos/Xbox.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .tcg {
+        background-image: url('/assets/backgrouond/white_and_black_halftone_background.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .producto__marcas {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-content: space-around;
+    }
+
+    .producto__logo {
+        width: 100vw;
+        object-fit: contain;
+
+    }
+
+    .banner2 {
+        width: 100%;
+        height: 100vh;
+        background-image: url('/assets/backgrouond/juegos/play.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'roboto';
+        color: white;
+        font-weight: bold;
+        display: grid;
+        align-content: center;
+        text-align: center;
+    }
+
+    .banner2 h1 {
+        font-size: 40px;
+    }
+
+    #pie {
+        display: grid;
+        grid-template-areas:
+            "texto"
+            "imagenes";
+        bottom: auto;
+        color: white;
+        padding: 20px 20px;
+        background-color: #004280;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        justify-content: center;
+        align-items: center;
+        border-top: solid #DBFE00 5px;
+    }
+
+    .pie__texto {
+        grid-area: texto;
+    }
+
+    .redes-sociales{
+        display: flex;
+        justify-content: center;
+    }
+
+    .redes-sociales img {
+        grid-area: imagenes;
+        max-height: 30px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .redes-sociales img :first-of-type {
+        margin-left: 0%;
+    }
+   
+}
+
+
+
+/************ CELULARES PEQUEÑOS  *************************/
+
+
+
+@media (max-width: 576px) {
+
+    .menu__texto{
+        font-size: 3vw;
+        text-align: center;
+        border-bottom:solid gainsboro 1px;
+        padding-top: 5px;
+    }
+
+    .menu__borde{
+        border-bottom:solid gainsboro 3px;
+    }
+
+    nav{
+        border-top: solid white 5px;
+        border-bottom: solid white 5px;
+        border-left: 0ch !important;
+        border-right: 0ch !important;
+        margin: 0 0;
+    }
+
+    .topPage{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .topPage__button{
+        display: flex;
+        justify-content: center;
+    }
+
+    .brand{
+        display: flex;
+        justify-content: center;
+    }
+
+    .sm-blanco {
+        color: white;
+    }
+
+
+
+    .search {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        justify-items: center !important;
+        align-items: center;
+        width: 95vw;
+    }
+
+    .logo {
+        width: 7vw;
+        padding-top: 1%;
+    }
+
+    .heroGames {
+        width: 50vw;
+        padding-top: 1%;
+    }
+
+    .otrosLinks {
+        display: none;
+    }
+
+    .otrosLinks__lista {
+        display: none;
+    }
+
+    .otrosLinks__elemento {
+        display: none;
+    }
+
+
+    .novedades {
+        display: flex;
+        border-bottom: solid #DBFE00 10px;
+        background-color: #004280;
+        justify-content: center;
+    }
+
+    .anterior {
+        display: none;
+    }
+
+    .siguiente {
+        display: none;
+    }
+
+    .novedades__producto {
+        width: 100vw;
+        border-radius: 0%;
+    }
+
+    .destacados {
+        padding-top: 2%;
+        border-bottom: solid #DBFE00 10px;
+    }
+
+
+    .destacados__titulo {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: italic;
+        font-size: 22px;
+        text-align: center;
+        color: black;
+    }
+
+    .destacados__imagenes {
+        display: grid;
+        grid-template-rows: repeat(5, 200px);
+        flex-direction: column;
+    }
+
+    .destacados__producto {
+        max-height: 150px;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .videojuegos {
+        background-image: url('/assets/backgrouond/juegos/Xbox.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .tcg {
+        background-image: url('/assets/backgrouond/white_and_black_halftone_background.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .producto__marcas {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-content: space-around;
+    }
+
+    .producto__logo {
+        width: 100vw;
+        object-fit: contain;
+
+    }
+
+    .banner2 {
+        width: 100%;
+        height: 100vh;
+        background-image: url('/assets/backgrouond/juegos/play.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'roboto';
+        color: white;
+        font-weight: bold;
+        display: grid;
+        align-content: center;
+        text-align: center;
+    }
+
+    .banner2 h1 {
+        font-size: 40px;
+    }
+
+    #pie {
+        display: grid;
+        grid-template-areas:
+            "texto"
+            "imagenes";
+        bottom: auto;
+        color: white;
+        padding: 20px 20px;
+        background-color: #004280;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        justify-content: center;
+        align-items: center;
+        border-top: solid #DBFE00 5px;
+    }
+
+    .pie__texto {
+        grid-area: texto;
+    }
+
+    .redes-sociales{
+        display: flex;
+        justify-content: center;
+    }
+
+    .redes-sociales img {
+        grid-area: imagenes;
+        max-height: 30px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .redes-sociales img :first-of-type {
+        margin-left: 0%;
+    }
+   
 }
