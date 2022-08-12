@@ -40,11 +40,10 @@ a {
   header {
     max-width: 100vw;
   }
-  header nav {
-    padding: 0 0;
-    display: grid;
-    grid-template-columns: 1fr;
+  nav {
     border-bottom: solid white 5px;
+    border-left: 0ch !important;
+    border-right: 0ch !important;
   }
   .topPage {
     display: grid;
@@ -79,11 +78,11 @@ a {
     justify-self: center;
     width: 90%;
   }
-  #logo {
+  .logo {
     width: 18%;
     padding-left: 2%;
   }
-  #heroGames {
+  .heroGames {
     width: 70%;
   }
   #navbarNavDropdown {
@@ -109,6 +108,9 @@ a {
     color: white;
     padding: 0px 8px;
   }
+  .botonNavegacion {
+    display: none;
+  }
   .seccion {
     display: grid !important;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -126,6 +128,9 @@ a {
   .nav__element:hover {
     background-color: white;
     color: #004280 !important;
+  }
+  .seccion__elemento > * {
+    align-self: center;
   }
   .novedades {
     display: grid;
@@ -159,11 +164,27 @@ a {
     width: 100%;
   }
   .novedades--animacion {
-    animation-name: crecer;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
-    animation-delay: 0.5s;
-    animation-iteration-count: 1;
+    -webkit-animation-name: crecer;
+            animation-name: crecer;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  @-webkit-keyframes crecer {
+    0% {
+      transform: scale(0);
+    }
+    70% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scaleX(1);
+    }
   }
   @keyframes crecer {
     0% {
@@ -177,10 +198,25 @@ a {
     }
   }
   .novedades--derecha {
-    animation-name: derecha;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: derecha;
+            animation-name: derecha;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes derecha {
+    0% {
+      transform: translate(-5%);
+    }
+    50% {
+      transform: translate(5%);
+    }
+    100% {
+      transform: translate(-5%);
+    }
   }
   @keyframes derecha {
     0% {
@@ -194,10 +230,25 @@ a {
     }
   }
   .novedades--izquierda {
-    animation-name: izquierda;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: izquierda;
+            animation-name: izquierda;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes izquierda {
+    0% {
+      transform: translate(5%) rotate(180deg);
+    }
+    50% {
+      transform: translate(-5%) rotate(180deg);
+    }
+    100% {
+      transform: translate(5%) rotate(180deg);
+    }
   }
   @keyframes izquierda {
     0% {
@@ -246,21 +297,6 @@ a {
     max-height: 280px;
     max-width: 280px;
   }
-  footer {
-    width: 100%;
-    color: #DBFE00;
-    padding: 20px 20px;
-    background-color: #004280;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-style: italic;
-    text-transform: uppercase;
-    position: relative;
-  }
-  footer img {
-    height: 5vh;
-    margin-top: 5px;
-    padding: 0% 0.5%;
-  }
   .producto {
     position: relative;
     display: grid;
@@ -298,7 +334,8 @@ a {
   }
   .producto__logo {
     width: 85%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     border-radius: 50px;
     transition: all 100ms;
   }
@@ -319,6 +356,24 @@ a {
     display: grid;
     align-content: center;
     text-align: center;
+  }
+  #pie {
+    width: 100%;
+    color: #DBFE00;
+    padding: 20px 20px;
+    background-color: #004280;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .redes-sociales img {
+    max-height: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  .redes-sociales img :first-of-type {
+    margin-left: 0%;
   }
 }
 /************ COMPUTADORAS PEQUEÑAS *************************/
@@ -326,11 +381,10 @@ a {
   header {
     max-width: 100vw;
   }
-  header nav {
-    padding: 0 0;
-    display: grid;
-    grid-template-columns: 1fr;
+  nav {
     border-bottom: solid white 5px;
+    border-left: 0ch !important;
+    border-right: 0ch !important;
   }
   .topPage {
     display: grid;
@@ -365,11 +419,11 @@ a {
     justify-self: center;
     width: 90%;
   }
-  #logo {
+  .logo {
     width: 18%;
     padding-left: 2%;
   }
-  #heroGames {
+  .heroGames {
     width: 70%;
   }
   #navbarNavDropdown {
@@ -395,6 +449,9 @@ a {
     color: white;
     padding: 0px 8px;
   }
+  .botonNavegacion {
+    display: none;
+  }
   .seccion {
     display: grid !important;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -412,6 +469,9 @@ a {
   .nav__element:hover {
     background-color: white;
     color: #004280 !important;
+  }
+  .seccion__elemento > * {
+    align-self: center;
   }
   .novedades {
     display: grid;
@@ -445,11 +505,27 @@ a {
     width: 100%;
   }
   .novedades--animacion {
-    animation-name: crecer;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
-    animation-delay: 0.5s;
-    animation-iteration-count: 1;
+    -webkit-animation-name: crecer;
+            animation-name: crecer;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  @-webkit-keyframes crecer {
+    0% {
+      transform: scale(0);
+    }
+    70% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scaleX(1);
+    }
   }
   @keyframes crecer {
     0% {
@@ -463,10 +539,25 @@ a {
     }
   }
   .novedades--derecha {
-    animation-name: derecha;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: derecha;
+            animation-name: derecha;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes derecha {
+    0% {
+      transform: translate(-5%);
+    }
+    50% {
+      transform: translate(5%);
+    }
+    100% {
+      transform: translate(-5%);
+    }
   }
   @keyframes derecha {
     0% {
@@ -480,10 +571,25 @@ a {
     }
   }
   .novedades--izquierda {
-    animation-name: izquierda;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: izquierda;
+            animation-name: izquierda;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes izquierda {
+    0% {
+      transform: translate(5%) rotate(180deg);
+    }
+    50% {
+      transform: translate(-5%) rotate(180deg);
+    }
+    100% {
+      transform: translate(5%) rotate(180deg);
+    }
   }
   @keyframes izquierda {
     0% {
@@ -532,21 +638,6 @@ a {
     max-height: 280px;
     max-width: 280px;
   }
-  footer {
-    width: 100%;
-    color: #DBFE00;
-    padding: 20px 20px;
-    background-color: #004280;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-style: italic;
-    text-transform: uppercase;
-    position: relative;
-  }
-  footer img {
-    height: 5vh;
-    margin-top: 5px;
-    padding: 0% 0.5%;
-  }
   .producto {
     position: relative;
     display: grid;
@@ -584,7 +675,8 @@ a {
   }
   .producto__logo {
     width: 85%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     border-radius: 50px;
     transition: all 100ms;
   }
@@ -605,6 +697,24 @@ a {
     display: grid;
     align-content: center;
     text-align: center;
+  }
+  #pie {
+    width: 100%;
+    color: #DBFE00;
+    padding: 20px 20px;
+    background-color: #004280;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .redes-sociales img {
+    max-height: 30px;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  .redes-sociales img :first-of-type {
+    margin-left: 0%;
   }
 }
 /************ TABLETS GRANDES *************************/
@@ -649,11 +759,11 @@ a {
     align-items: center;
     width: 95vw;
   }
-  #logo {
+  .logo {
     width: 7vw;
     padding-top: 1%;
   }
-  #heroGames {
+  .heroGames {
     width: 50vw;
     padding-top: 1%;
   }
@@ -721,7 +831,8 @@ a {
   }
   .producto__logo {
     width: 100vw;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .banner2 {
     width: 100%;
@@ -740,9 +851,9 @@ a {
   .banner2 h1 {
     font-size: 40px;
   }
-  footer {
+  #pie {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "texto" "imagenes";
     bottom: auto;
     color: white;
     padding: 20px 20px;
@@ -753,17 +864,21 @@ a {
     align-items: center;
     border-top: solid #DBFE00 5px;
   }
-  footer section {
-    grid-row: 1/2;
+  .pie__texto {
+    grid-area: texto;
   }
-  footer div {
+  .redes-sociales {
     display: flex;
     justify-content: center;
   }
-  footer div img {
-    height: 5vh;
+  .redes-sociales img {
+    grid-area: imagenes;
+    max-height: 30px;
     margin-top: 5px;
     margin-left: 10px;
+  }
+  .redes-sociales img :first-of-type {
+    margin-left: 0%;
   }
 }
 /************ TABLETS Y CELULARES GRANDES*************************/
@@ -808,11 +923,11 @@ a {
     align-items: center;
     width: 95vw;
   }
-  #logo {
+  .logo {
     width: 7vw;
     padding-top: 1%;
   }
-  #heroGames {
+  .heroGames {
     width: 50vw;
     padding-top: 1%;
   }
@@ -880,7 +995,8 @@ a {
   }
   .producto__logo {
     width: 100vw;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .banner2 {
     width: 100%;
@@ -899,9 +1015,9 @@ a {
   .banner2 h1 {
     font-size: 40px;
   }
-  footer {
+  #pie {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "texto" "imagenes";
     bottom: auto;
     color: white;
     padding: 20px 20px;
@@ -912,17 +1028,21 @@ a {
     align-items: center;
     border-top: solid #DBFE00 5px;
   }
-  footer section {
-    grid-row: 1/2;
+  .pie__texto {
+    grid-area: texto;
   }
-  footer div {
+  .redes-sociales {
     display: flex;
     justify-content: center;
   }
-  footer div img {
-    height: 5vh;
+  .redes-sociales img {
+    grid-area: imagenes;
+    max-height: 30px;
     margin-top: 5px;
     margin-left: 10px;
+  }
+  .redes-sociales img :first-of-type {
+    margin-left: 0%;
   }
 }
 /************ CELULARES PEQUEÑOS  *************************/
@@ -967,11 +1087,11 @@ a {
     align-items: center;
     width: 95vw;
   }
-  #logo {
+  .logo {
     width: 7vw;
     padding-top: 1%;
   }
-  #heroGames {
+  .heroGames {
     width: 50vw;
     padding-top: 1%;
   }
@@ -1039,7 +1159,8 @@ a {
   }
   .producto__logo {
     width: 100vw;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .banner2 {
     width: 100%;
@@ -1058,9 +1179,9 @@ a {
   .banner2 h1 {
     font-size: 40px;
   }
-  footer {
+  #pie {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "texto" "imagenes";
     bottom: auto;
     color: white;
     padding: 20px 20px;
@@ -1071,18 +1192,20 @@ a {
     align-items: center;
     border-top: solid #DBFE00 5px;
   }
-  footer section {
-    grid-row: 1/2;
+  .pie__texto {
+    grid-area: texto;
   }
-  footer div {
+  .redes-sociales {
     display: flex;
     justify-content: center;
   }
-  footer div img {
-    height: 5vh;
+  .redes-sociales img {
+    grid-area: imagenes;
+    max-height: 30px;
     margin-top: 5px;
     margin-left: 10px;
   }
-}
-
-/*# sourceMappingURL=estilos.css.map */
+  .redes-sociales img :first-of-type {
+    margin-left: 0%;
+  }
+}/*# sourceMappingURL=estilos.css.map */
