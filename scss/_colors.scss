@@ -2,3 +2,13 @@
 //Variables
 $brand-yellow: #DBFE00;
 $brand-blue: #004280;
+
+$navbar-original:(
+    fondo:$brand-blue,
+    letra:#fff
+);
+
+$navbar-hover:(
+    fondo:#fff,
+    letra:$brand-blue
+);

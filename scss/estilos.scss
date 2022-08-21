@@ -38,6 +38,11 @@ a {
     filter: invert(1);
 }
 
+@mixin navegacion {
+    padding: 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 /****************** COMPUTADORAS Y LAPTOPS GRANDES********************/
 
@@ -64,9 +69,7 @@ a {
     }
 
     .navbar {
-        padding: 0 0;
-        display: grid;
-        grid-template-columns: 1fr;
+        @include navegacion();
     }
 
     .topPage__Up {
@@ -124,7 +127,7 @@ a {
 
     .otrosLinks__elemento {
         display: inline-block;
-        font-family: $brand-font;
+       @extend .texto;
         font-style: italic;
         font-size: 17px;
         color: white;
@@ -133,7 +136,7 @@ a {
 
     .seccion {
         display: grid !important;
-        font-family: $brand-font;
+        @extend .texto;
         font-size: 30px;
         grid-template-columns: repeat(5, 1fr);
     }
@@ -143,13 +146,13 @@ a {
         display: flex;
         transition: 0.3s;
         justify-content: center;
-        color: white !important;
+        color: map-get($navbar-original, letra) !important;
         text-align: center;
         font-size: 1.5vw;
 
         &:hover {
-            background-color: white;
-            color: $brand-blue  !important;
+            background-color: map-get($navbar-hover, fondo);
+            color: map-get($navbar-hover, letra) !important;
 
         }
     }
@@ -306,16 +309,17 @@ a {
         color: $brand-yellow;
         padding: 20px 20px;
         background-color: $brand-blue;
-        font-family: $brand-font;
+        @extend .texto;
         font-style: italic;
         text-transform: uppercase;
         position: relative;
+
         img {
             height: 5vh;
             margin-top: 5px;
             padding: 0% 0.5%;
         }
-}
+    }
 
     //TERMINA INDEX
 
@@ -368,10 +372,10 @@ a {
         object-fit: contain;
         border-radius: 50px;
         transition: all 100ms;
-    }
 
-    .producto__logo:hover {
-        width: 98%;
+        &:hover {
+            width: 98%;
+        }
     }
 
     .banner2 {
@@ -418,9 +422,7 @@ a {
     }
 
     .navbar {
-        padding: 0 0;
-        display: grid;
-        grid-template-columns: 1fr;
+        @include navegacion();
     }
 
     .topPage__Up {
@@ -478,7 +480,7 @@ a {
 
     .otrosLinks__elemento {
         display: inline-block;
-        font-family: $brand-font;
+       @extend .texto;
         font-style: italic;
         font-size: 17px;
         color: white;
@@ -487,7 +489,7 @@ a {
 
     .seccion {
         display: grid !important;
-        font-family: $brand-font;
+        @extend .texto;
         font-size: 30px;
         grid-template-columns: repeat(5, 1fr);
     }
@@ -660,16 +662,17 @@ a {
         color: $brand-yellow;
         padding: 20px 20px;
         background-color: $brand-blue;
-        font-family: $brand-font;
+       @extend .texto;
         font-style: italic;
         text-transform: uppercase;
         position: relative;
+
         img {
             height: 5vh;
             margin-top: 5px;
             padding: 0% 0.5%;
         }
-}
+    }
 
     //TERMINA INDEX
 
@@ -746,10 +749,7 @@ a {
 }
 
 
-
 /************ TABLETS GRANDES *************************/
-
-
 
 @media (max-width: 991px) and (min-width:768px) {
 
@@ -919,18 +919,21 @@ a {
         color: white;
         padding: 20px 20px;
         background-color: $brand-blue;
-        font-family: $brand-font;
+       @extend .texto;
         font-style: italic;
         justify-content: center;
         align-items: center;
         border-top: solid $brand-yellow 5px;
-        section{
+
+        section {
             grid-row: 1/2;
         }
-        div{
+
+        div {
             display: flex;
             justify-content: center;
-            img{   
+
+            img {
                 height: 5vh;
                 margin-top: 5px;
                 margin-left: 10px;
@@ -940,10 +943,7 @@ a {
 }
 
 
-
 /************ TABLETS Y CELULARES GRANDES*************************/
-
-
 
 @media (max-width: 767px) and (min-width:577PX) {
 
@@ -1113,18 +1113,21 @@ a {
         color: white;
         padding: 20px 20px;
         background-color: $brand-blue;
-        font-family: $brand-font;
+       @extend .texto;
         font-style: italic;
         justify-content: center;
         align-items: center;
         border-top: solid $brand-yellow 5px;
-        section{
+
+        section {
             grid-row: 1/2;
         }
-        div{
+
+        div {
             display: flex;
             justify-content: center;
-            img{   
+
+            img {
                 height: 5vh;
                 margin-top: 5px;
                 margin-left: 10px;
@@ -1134,10 +1137,7 @@ a {
 }
 
 
-
 /************ CELULARES PEQUEÑOS  *************************/
-
-
 
 @media (max-width: 576px) {
 
@@ -1307,18 +1307,21 @@ a {
         color: white;
         padding: 20px 20px;
         background-color: $brand-blue;
-        font-family: $brand-font;
+        @extend .texto;
         font-style: italic;
         justify-content: center;
         align-items: center;
         border-top: solid $brand-yellow 5px;
-        section{
+
+        section {
             grid-row: 1/2;
         }
-        div{
+
+        div {
             display: flex;
             justify-content: center;
-            img{   
+
+            img {
                 height: 5vh;
                 margin-top: 5px;
                 margin-left: 10px;
