@@ -70,46 +70,149 @@
     </header>
 
     <main>
-        <section>
-              
-            <div class="producto">
-                <div class="banner2">
-                    <h1>Juegos de Mesa</h1>  
-                    <p>Aqui voy a poner una malla de 4 columnas por 8 filas.</p>
-                </div>
-            </div>
-        
-            <div class="banner2">
+        <section class="container-fluid row malla_productos">
+            <div class="filtros col-2">
+                <h4>Filtros</h4>
                 <div>
-                    <h1>Panini</h1>
-                    <p>Aqui pondré una seccion de botones para navegar entre todas las paginas de esta sección</p>
+                    <h5>Tipo</h5>
+                    <input type="checkbox" id="amiibo" value="amiibo"><label for="amiibo">Amiibo</label></input><br>
+                    <input type="checkbox" id="funko" value="funko"><label for="funko">Funko</label></input><br>
+                    <input type="checkbox" id="figma" value="figma"><label for="figma"></label>Figma</input>
+                </div>
+                <div>
+                    <h5>Saga</h5>
+                    <input type="checkbox" id="pokemon" value="pokemon"><label for="pokemon">Pokemon</label></input><br>
+                    <input type="checkbox" id="zelda" value="zelda"><label for="zelda">Zelda</label></input><br>
+                    <input type="checkbox" id="metroid" value="metroid"><label for="metroid">Metroid</label></input><br>
+                    <input type="checkbox" id="anime" value="anime"><label for="anime">Anime</label></input><br>
+                    <input type="checkbox" id="marvel" value="marvel"><label for="marvel">Marvel</label></input><br>
+                    <input type="checkbox" id="smash" value="smash"><label for="smash">Smash</label></input><br>
+                    <input type="checkbox" id="dragonQuest" value="dragonQuest"><label for="dragonQuest">Dragon Quest</label></input><br>
+                    <input type="checkbox" id="marioBros" value="marioBros"><label for="marioBros">Mario Bros.</label></input>
+                </div>
+                <button type="button" class="btn btn-outline-primary">Aplicar</button>
+            </div>
+            <div class="container col">
+                <h2 class="text-center subtitulo">Juegos de Mesa</h2>
+                <div class="row">
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/100Mexicanos.jpg" alt="100">
+                        <h3 class="tarjeta_producto">100 Mexicanos dijeron</h3>
+                        <p>$499.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/adivinaQuien.jpg" alt="adivinaQuien">
+                        <h3 class="tarjeta_producto">Adivina Quien</h3>
+                        <p>$399.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/ajedrezMarvel.jpg" alt="ajedrezMarvel">
+                        <h3 class="tarjeta_producto">Ajedrez Marvel</h3>
+                        <p>$599.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/battleship.jpg" alt="battleship">
+                        <h3 class="tarjeta_producto">Battleship</h3>
+                        <p>$599.00</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/catan.jpg" alt="catan">
+                        <h3 class="tarjeta_producto">Catan</h3>
+                        <p>$599.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/conect4.jpg" alt="conect4">
+                        <h3 class="tarjeta_producto">Connect4</h3>
+                        <p>$699.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/conect4_spiderman.jpg" alt="conect4_spiderman>
+                        <h3 class="tarjeta_producto">Connect4 Spider-man</h3>
+                        <p>$799.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/dd_essentialPack.jpg" alt="dd_essentialPack">
+                        <h3 class="tarjeta_producto">Dungeons & Dragons: Essential Kit</h3>
+                        <p>$1,099.00</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/dobble.jpg" alt="dobble>
+                        <h3 class="tarjeta_producto">Dobble</h3>
+                        <p>$299.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/life_superMario.jpg" alt="life_superMario">
+                        <h3 class="tarjeta_producto">Life: Super Mario</h3>
+                        <p>$599.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/maraton.jpg" alt="maraton">
+                        <h3 class="tarjeta_producto">Maratón</h3>
+                        <p>$599.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/monopoly_Mario.jpg" alt="monopoly_Mario">
+                        <h3 class="tarjeta_producto">Monopoly Super Mario</h3>
+                        <p>$599.00</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/monopoly_marioKart.jpg" alt="monopoly_marioKart">
+                        <h3 class="tarjeta_producto">Monopoly Mario Kart</h3>
+                        <p>$799.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/operando.jpg" alt="operando">
+                        <h3 class="tarjeta_producto">Operando</h3>
+                        <p>$599.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/rummy-o.jpg" alt="rummy-o">
+                        <h3 class="tarjeta_producto">Rummy-O</h3>
+                        <p>$599.00</p>
+                    </div>
+                    <div class="tarjeta text-center col-xs-12 col-sm-12 col-lg-6">
+                        <img src="/assets/img/juegosDeMesa/unoFlip.jpg" alt="unoFlip">
+                        <h3 class="tarjeta_producto">UNO FLIP</h3>
+                        <p>$599.00</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
     
-    <footer id="pie">
-        <section class="pie__texto">
-            <h4>Desarrollado por Raul Munguia</h4>
-            <h4></h4>
-        </section>
-        <!--Redes sociales-->
-        <div class="redes-sociales">
-            <a href="https://www.facebook.com/gaming/HeroGamesShop" target="_blank">
-                <img src="/assets/icons/redes/fb.png" alt="Facebook" />
-            </a>
-            <a href="https://www.instagram.com/rulink10/" target="_blank">
-                <img src="/assets/icons/redes/IG.png" alt="Instagram" />
-            </a>
-            <a href="https://twitter.com/Rulink10" target="_blank">
-                <img src="/assets/icons/redes/TW.png" alt="Twitter" />
-            </a>
-            <a href="https://www.youtube.com/channel/UCFnCqUS76YrJ9YNVRemCbWw" target="_blank">
-                <img src="/assets//icons/redes/YR_circulo.png" alt="YouTube" />
-            </a>
-            <a href="https://www.twitch.tv/rulink10" target="_blank">
-                <img src="/assets/icons/redes/TTV.png" alt="Twitch" />
-            </a>
+    <footer>
+        <div class="container">
+            <section class="row">
+                <p class="col text-center">Desarrollado por Raul Munguia</p>
+                    <a href="/pages/contacto.html" target="" class="text-center">
+                        <section class="col btn btn-outline-light">Contacto</section>
+                    </a>
+            </section>
+            <!--Redes sociales-->
+            
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/gaming/HeroGamesShop" target="_blank">
+                    <img src="/assets/icons/redes/fb.png" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/rulink10/" target="_blank">
+                    <img src="/assets/icons/redes/IG.png" alt="Instagram" />
+                </a>
+                <a href="https://twitter.com/Rulink10" target="_blank">
+                    <img src="/assets/icons/redes/TW.png" alt="Twitter" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCFnCqUS76YrJ9YNVRemCbWw" target="_blank">
+                    <img src="/assets//icons/redes/yt.png" alt="YouTube" />
+                </a>
+                <a href="https://www.twitch.tv/rulink10" target="_blank">
+                    <img src="/assets/icons/redes/TTV.png" alt="Twitch" />
+                </a>
+            </div>
         </div>
     </footer>
 

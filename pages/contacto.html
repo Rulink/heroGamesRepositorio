@@ -12,7 +12,7 @@
     <!--icono marca-->
     <link rel="shortcut icon" href="/assets/icons/heroGamesLogo.png">
     <!--Hoja de Estilos de manera externa-->
-    <link rel="stylesheet" href="/css/estilos.css"/>
+    <link rel="stylesheet" href="/css/estilos.css" />
     <!--Nombre de la pestaña-->
     <title>Hero Games - Contacto</title>
 </head>
@@ -69,28 +69,98 @@
         </nav>
     </header>
 
-    <footer id="pie">
-        <section class="pie__texto">
-            <h4>Desarrollado por Raul Munguia</h4>
-            <h4></h4>
-        </section>
-        <!--Redes sociales-->
-        <div class="redes-sociales">
-            <a href="https://www.facebook.com/gaming/HeroGamesShop" target="_blank">
-                <img src="/assets/icons/redes/fb.png" alt="Facebook" />
-            </a>
-            <a href="https://www.instagram.com/rulink10/" target="_blank">
-                <img src="/assets/icons/redes/IG.png" alt="Instagram" />
-            </a>
-            <a href="https://twitter.com/Rulink10" target="_blank">
-                <img src="/assets/icons/redes/TW.png" alt="Twitter" />
-            </a>
-            <a href="https://www.youtube.com/channel/UCFnCqUS76YrJ9YNVRemCbWw" target="_blank">
-                <img src="/assets//icons/redes/YR_circulo.png" alt="YouTube" />
-            </a>
-            <a href="https://www.twitch.tv/rulink10" target="_blank">
-                <img src="/assets/icons/redes/TTV.png" alt="Twitch" />
-            </a>
+    <main class="contacto fondo1">
+        <div class="content">
+            <div class="container">
+                <div class="row align-items-stretch no-gutters contact-wrap contacto">
+                    <div class="col-md-8">
+                        <div class="form h-100">
+                            <h3>¡Mandanos tus comentarios!</h3>
+                            <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 form-group mb-5">
+                                        <label for="" class="col-form-label">Nombre(s) *</label>
+                                        <input type="text" class="form-control" name="name" id="name"
+                                            placeholder="Aqui tu(s) nombre(s)">
+                                    </div>
+                                    <div class="col-md-6 form-group mb-5">
+                                        <label for="" class="col-form-label">Apellidos</label>
+                                        <input type="text" class="form-control" name="lastName" id="lastName"
+                                            placeholder="Apellidos">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 form-group mb-5">
+                                        <label for="" class="col-form-label">Correo *</label>
+                                        <input type="text" class="form-control" name="email" id="email"
+                                            placeholder="ejemplo@herogames.com.mx">
+                                    </div>
+                                    <div class="col-md-6 form-group mb-5">
+                                        <label for="" class="col-form-label">Telefono</label>
+                                        <input type="text" class="form-control" name="phone" id="phone"
+                                            placeholder="55-5555-5555">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 form-group mb-5">
+                                        <label for="message" class="col-form-label">Escribenos tus dudas, quejas y sugerencias  *</label>
+                                        <textarea class="form-control" name="message" id="message" cols="30" rows="4"
+                                            placeholder="Me encanta su tienda, ¡Gracias!"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group contacto__botones">
+                                        <button type="reset" class="btn btn-secondary">Borrar Informacion</button>
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div id="form-message-warning mt-4"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-9 col-sm-12 info">
+                        <div class="contact-info h-100">
+                            <h3>Información de Contacto</h3>
+                            <p class="mb-5">Por el momento no contamos con tienda física, y este es nuestro unico medio de comunicación
+                            </p>
+                            <h3 CLASS="hero bigText">HERO GAMES</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <section class="row">
+                <p class="col text-center">Desarrollado por Raul Munguia</p>
+                    <a href="/pages/contacto.html" target="" class="text-center">
+                        <section class="col btn btn-outline-light">Contacto</section>
+                    </a>
+            </section>
+            <!--Redes sociales-->
+            
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/gaming/HeroGamesShop" target="_blank">
+                    <img src="/assets/icons/redes/fb.png" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/rulink10/" target="_blank">
+                    <img src="/assets/icons/redes/IG.png" alt="Instagram" />
+                </a>
+                <a href="https://twitter.com/Rulink10" target="_blank">
+                    <img src="/assets/icons/redes/TW.png" alt="Twitter" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCFnCqUS76YrJ9YNVRemCbWw" target="_blank">
+                    <img src="/assets//icons/redes/yt.png" alt="YouTube" />
+                </a>
+                <a href="https://www.twitch.tv/rulink10" target="_blank">
+                    <img src="/assets/icons/redes/TTV.png" alt="Twitch" />
+                </a>
+            </div>
         </div>
     </footer>
 

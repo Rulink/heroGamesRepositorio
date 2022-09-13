@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "roboto";
-  src: url(/assets/fonts/Roboto/Roboto-BlackItalic.ttf);
+  font-family: hero;
+  src: url(/assets/fonts/hiJack.ttf);
 }
 * {
   margin: 0%;
@@ -33,6 +33,22 @@ a {
 
 .invertir {
   filter: invert(1);
+}
+
+.hero {
+  font-family: hero;
+}
+
+.bigText {
+  font-size: 5vw !important;
+  text-align: center;
+}
+
+.subtitulo {
+  font-family: hero !important;
+  padding: 2rem 0;
+  font-size: 7vw;
+  color: #004280;
 }
 
 /****************** COMPUTADORAS Y LAPTOPS GRANDES********************/
@@ -79,6 +95,32 @@ a {
     justify-self: center;
     width: 90%;
   }
+  .search button {
+    align-self: center;
+  }
+  #carouselExampleCaptions {
+    background-color: #004280;
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-inner {
+    width: 70%;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 5%;
+  }
+  .z2 {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    opacity: 50%;
+    width: 100vw;
+    height: 15vh;
+  }
+  .z1 {
+    position: relative;
+    z-index: 2;
+  }
   #logo {
     width: 18%;
     padding-left: 2%;
@@ -90,7 +132,7 @@ a {
     margin-top: 1%;
     border-top: solid white 5px;
     display: grid !important;
-    grid-template-columns: 1fr;
+    align-items: stretch;
   }
   .otrosLinks {
     grid-area: otro;
@@ -103,7 +145,6 @@ a {
   }
   .otrosLinks__elemento {
     display: inline-block;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: italic;
     font-size: 17px;
     color: white;
@@ -111,7 +152,6 @@ a {
   }
   .seccion {
     display: grid !important;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 30px;
     grid-template-columns: repeat(5, 1fr);
   }
@@ -119,19 +159,18 @@ a {
     display: flex;
     transition: 0.3s;
     justify-content: center;
-    color: white !important;
+    color: #fff !important;
     text-align: center;
     font-size: 1.5vw;
   }
   .nav__element:hover {
-    background-color: white;
+    background-color: #fff;
     color: #004280 !important;
   }
   .novedades {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     background-color: #004280;
-    border-bottom: solid #DBFE00 20px;
     justify-items: center;
     align-items: center;
   }
@@ -159,11 +198,27 @@ a {
     width: 100%;
   }
   .novedades--animacion {
-    animation-name: crecer;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
-    animation-delay: 0.5s;
-    animation-iteration-count: 1;
+    -webkit-animation-name: crecer;
+            animation-name: crecer;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  @-webkit-keyframes crecer {
+    0% {
+      transform: scale(0);
+    }
+    70% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scaleX(1);
+    }
   }
   @keyframes crecer {
     0% {
@@ -177,10 +232,25 @@ a {
     }
   }
   .novedades--derecha {
-    animation-name: derecha;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: derecha;
+            animation-name: derecha;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes derecha {
+    0% {
+      transform: translate(-5%);
+    }
+    50% {
+      transform: translate(5%);
+    }
+    100% {
+      transform: translate(-5%);
+    }
   }
   @keyframes derecha {
     0% {
@@ -194,10 +264,25 @@ a {
     }
   }
   .novedades--izquierda {
-    animation-name: izquierda;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: izquierda;
+            animation-name: izquierda;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes izquierda {
+    0% {
+      transform: translate(5%) rotate(180deg);
+    }
+    50% {
+      transform: translate(-5%) rotate(180deg);
+    }
+    100% {
+      transform: translate(5%) rotate(180deg);
+    }
   }
   @keyframes izquierda {
     0% {
@@ -215,57 +300,83 @@ a {
     border-radius: 25px;
     grid-column: 2/7;
   }
-  .destacados {
-    margin: 0px;
-    border-bottom: solid #DBFE00 20px;
-  }
-  .destacados article {
-    position: relative;
-    height: 490px;
-    display: flex;
-  }
-  .destacados > * {
+  section.container {
+    margin: 0 0 0 0 !important;
+    border: 0 0 0 0 !important;
+    max-width: 100vw;
     justify-content: space-evenly;
-    flex-direction: column;
+  }
+  div.container {
+    margin: 0 0 0 0 !important;
+    border: 0 0 0 0 !important;
+    max-width: 100vw;
+    justify-content: space-evenly;
+  }
+  .destacados {
+    padding: 1% 0 2% 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
   }
   .destacados__titulo {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-style: italic;
-    font-size: 35px;
+    padding-bottom: 0%;
+    font-size: 3rem;
     text-align: center;
-    margin-left: 5%;
-    top: inherit;
-    color: black;
+    color: #004280;
   }
-  .destacados__imagenes {
-    display: flex;
-    justify-content: space-around;
-    align-content: space-between;
+  .destacados section div {
+    border-radius: 5%;
+    transition: all 150ms;
+  }
+  .destacados section div:hover {
+    box-shadow: 20px 20px 15px grey;
+  }
+  .destacados section div p {
+    font-style: italic;
+    font-size: xx-large;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    text-shadow: black;
   }
   .destacados__producto {
-    max-height: 280px;
-    max-width: 280px;
+    height: 200px;
+    margin: 15% 0 5% 0;
   }
   footer {
+    transition: all 150ms;
     width: 100%;
-    color: #DBFE00;
+    color: white;
     padding: 20px 20px;
     background-color: #004280;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: italic;
     text-transform: uppercase;
-    position: relative;
+    bottom: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  footer a {
+    padding: 0% 1%;
   }
   footer img {
     height: 5vh;
-    margin-top: 5px;
-    padding: 0% 0.5%;
+    margin-top: 50%;
+  }
+  footer img:hover {
+    border: solid #fff;
+    border-radius: 90px;
+  }
+  footer .btn {
+    width: 20% !important;
+  }
+  footer .btn:hover {
+    color: #004280;
+  }
+  .redes-sociales {
+    display: flex;
+    justify-content: center;
   }
   .producto {
     position: relative;
     display: grid;
     grid-template-rows: 15% 70% 15%;
-    height: 80vh;
+    height: 85vh;
   }
   .videojuegos {
     background-image: url("/assets/backgrouond/juegos/xbox.jpg");
@@ -298,7 +409,8 @@ a {
   }
   .producto__logo {
     width: 85%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     border-radius: 50px;
     transition: all 100ms;
   }
@@ -319,6 +431,152 @@ a {
     display: grid;
     align-content: center;
     text-align: center;
+  }
+  .tarjeta {
+    width: 22%;
+    margin: 1% 0;
+    border-radius: 5%;
+    transition: all 150ms;
+    text-align: center;
+  }
+  .tarjeta:hover {
+    box-shadow: 20px 20px 15px grey;
+  }
+  .tarjeta img {
+    width: 90%;
+    margin: 5% 0;
+  }
+  .tarjeta h3 {
+    font-size: 1.2rem;
+  }
+  .tarjeta p {
+    font-style: italic;
+    font-size: xx-large;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    text-shadow: black;
+  }
+  .filtros {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5% 0% 0% 5%;
+    border-right: 2px solid rgba(0, 0, 0, 0.4);
+  }
+  .filtros h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0%;
+  }
+  .filtros h5 {
+    padding-left: 3%;
+    margin: 4% 0;
+  }
+  .filtros button {
+    margin-top: 5%;
+    width: 50%;
+  }
+  input {
+    margin: 3% 3% 3% 0%;
+  }
+  .malla_productos {
+    padding-bottom: 2%;
+    padding-right: 0% !important;
+  }
+  .col-form-label {
+    color: #000;
+    font-size: 13px;
+  }
+  .btn1, .form-control, .custom-select {
+    height: 45px;
+  }
+  .custom-select:active, .custom-select:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #000;
+  }
+  .contact-wrap {
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+  .contact-wrap .col-form-label {
+    font-size: 14px;
+    color: black;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    padding: 0;
+  }
+  .contact-wrap .form, .contact-wrap .contact-info {
+    padding: 40px;
+  }
+  .contact-wrap .contact-info {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-wrap .contact-info ul li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-wrap .contact-info ul li .wrap-icon {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  .contact-wrap .form {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .contact-wrap .form h3 {
+    color: #35477d;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .contact-wrap .contact-info {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  .contact-wrap .contact-info h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  label.error {
+    font-size: 12px;
+    color: red;
+  }
+  #message {
+    resize: vertical;
+  }
+  #form-message-warning, #form-message-success {
+    display: none;
+  }
+  #form-message-warning {
+    color: #B90B0B;
+  }
+  #form-message-success {
+    color: #55A44E;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .submitting {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000;
+  }
+  .fondo1 {
+    background-image: url("/assets/backgrouond/juegos/xbox.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .contacto__botones {
+    display: flex;
+    justify-content: right;
+  }
+  .contacto__botones button {
+    margin-right: 5%;
   }
 }
 /************ COMPUTADORAS PEQUEÑAS *************************/
@@ -365,6 +623,32 @@ a {
     justify-self: center;
     width: 90%;
   }
+  .search button {
+    align-self: center;
+  }
+  #carouselExampleCaptions {
+    background-color: #004280;
+    display: flex;
+    justify-content: center;
+  }
+  .carousel-inner {
+    width: 70%;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 5%;
+  }
+  .z2 {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    opacity: 50%;
+    width: 100vw;
+    height: 15vh;
+  }
+  .z1 {
+    position: relative;
+    z-index: 2;
+  }
   #logo {
     width: 18%;
     padding-left: 2%;
@@ -376,7 +660,7 @@ a {
     margin-top: 1%;
     border-top: solid white 5px;
     display: grid !important;
-    grid-template-columns: 1fr;
+    align-items: stretch;
   }
   .otrosLinks {
     grid-area: otro;
@@ -389,7 +673,6 @@ a {
   }
   .otrosLinks__elemento {
     display: inline-block;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: italic;
     font-size: 17px;
     color: white;
@@ -397,7 +680,6 @@ a {
   }
   .seccion {
     display: grid !important;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: 30px;
     grid-template-columns: repeat(5, 1fr);
   }
@@ -405,19 +687,18 @@ a {
     display: flex;
     transition: 0.3s;
     justify-content: center;
-    color: white !important;
+    color: #fff !important;
     text-align: center;
     font-size: 1.5vw;
   }
   .nav__element:hover {
-    background-color: white;
+    background-color: #fff;
     color: #004280 !important;
   }
   .novedades {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     background-color: #004280;
-    border-bottom: solid #DBFE00 20px;
     justify-items: center;
     align-items: center;
   }
@@ -445,11 +726,27 @@ a {
     width: 100%;
   }
   .novedades--animacion {
-    animation-name: crecer;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
-    animation-delay: 0.5s;
-    animation-iteration-count: 1;
+    -webkit-animation-name: crecer;
+            animation-name: crecer;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  @-webkit-keyframes crecer {
+    0% {
+      transform: scale(0);
+    }
+    70% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scaleX(1);
+    }
   }
   @keyframes crecer {
     0% {
@@ -463,10 +760,25 @@ a {
     }
   }
   .novedades--derecha {
-    animation-name: derecha;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: derecha;
+            animation-name: derecha;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes derecha {
+    0% {
+      transform: translate(-5%);
+    }
+    50% {
+      transform: translate(5%);
+    }
+    100% {
+      transform: translate(-5%);
+    }
   }
   @keyframes derecha {
     0% {
@@ -480,10 +792,25 @@ a {
     }
   }
   .novedades--izquierda {
-    animation-name: izquierda;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: izquierda;
+            animation-name: izquierda;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes izquierda {
+    0% {
+      transform: translate(5%) rotate(180deg);
+    }
+    50% {
+      transform: translate(-5%) rotate(180deg);
+    }
+    100% {
+      transform: translate(5%) rotate(180deg);
+    }
   }
   @keyframes izquierda {
     0% {
@@ -501,57 +828,83 @@ a {
     border-radius: 25px;
     grid-column: 2/7;
   }
-  .destacados {
-    margin: 0px;
-    border-bottom: solid #DBFE00 20px;
-  }
-  .destacados article {
-    position: relative;
-    height: 490px;
-    display: flex;
-  }
-  .destacados > * {
+  section.container {
+    margin: 0 0 0 0 !important;
+    border: 0 0 0 0 !important;
+    max-width: 100vw;
     justify-content: space-evenly;
-    flex-direction: column;
+  }
+  div.container {
+    margin: 0 0 0 0 !important;
+    border: 0 0 0 0 !important;
+    max-width: 100vw;
+    justify-content: space-evenly;
+  }
+  .destacados {
+    padding: 1% 0 2% 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
   }
   .destacados__titulo {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-style: italic;
-    font-size: 35px;
+    padding-bottom: 0%;
+    font-size: 3rem;
     text-align: center;
-    margin-left: 5%;
-    top: inherit;
-    color: black;
+    color: #004280;
   }
-  .destacados__imagenes {
-    display: flex;
-    justify-content: space-around;
-    align-content: space-between;
+  .destacados section div {
+    border-radius: 5%;
+    transition: all 150ms;
+  }
+  .destacados section div:hover {
+    box-shadow: 20px 20px 15px grey;
+  }
+  .destacados section div p {
+    font-style: italic;
+    font-size: xx-large;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    text-shadow: black;
   }
   .destacados__producto {
-    max-height: 280px;
-    max-width: 280px;
+    height: 200px;
+    margin: 15% 0 5% 0;
   }
   footer {
+    transition: all 150ms;
     width: 100%;
-    color: #DBFE00;
+    color: white;
     padding: 20px 20px;
     background-color: #004280;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: italic;
     text-transform: uppercase;
-    position: relative;
+    bottom: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  footer a {
+    padding: 0% 1%;
   }
   footer img {
     height: 5vh;
-    margin-top: 5px;
-    padding: 0% 0.5%;
+    margin-top: 50%;
+  }
+  footer img:hover {
+    border: solid #fff;
+    border-radius: 90px;
+  }
+  footer .btn {
+    width: 20% !important;
+  }
+  footer .btn:hover {
+    color: #004280;
+  }
+  .redes-sociales {
+    display: flex;
+    justify-content: center;
   }
   .producto {
     position: relative;
     display: grid;
     grid-template-rows: 15% 70% 15%;
-    height: 80vh;
+    height: 85vh;
   }
   .videojuegos {
     background-image: url("/assets/backgrouond/juegos/xbox.jpg");
@@ -584,7 +937,8 @@ a {
   }
   .producto__logo {
     width: 85%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
     border-radius: 50px;
     transition: all 100ms;
   }
@@ -605,6 +959,152 @@ a {
     display: grid;
     align-content: center;
     text-align: center;
+  }
+  .tarjeta {
+    width: 22%;
+    margin: 1% 0;
+    border-radius: 5%;
+    transition: all 150ms;
+    text-align: center;
+  }
+  .tarjeta:hover {
+    box-shadow: 20px 20px 15px grey;
+  }
+  .tarjeta img {
+    width: 90%;
+    margin: 5% 0;
+  }
+  .tarjeta h3 {
+    font-size: 1.2rem;
+  }
+  .tarjeta p {
+    font-style: italic;
+    font-size: xx-large;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    text-shadow: black;
+  }
+  .filtros {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5% 0% 0% 5%;
+    border-right: 2px solid rgba(0, 0, 0, 0.4);
+  }
+  .filtros h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0%;
+  }
+  .filtros h5 {
+    padding-left: 3%;
+    margin: 4% 0;
+  }
+  .filtros button {
+    margin-top: 5%;
+    width: 50%;
+  }
+  input {
+    margin: 3% 3% 3% 0%;
+  }
+  .malla_productos {
+    padding-bottom: 2%;
+    padding-right: 0% !important;
+  }
+  .col-form-label {
+    color: #000;
+    font-size: 13px;
+  }
+  .btn1, .form-control, .custom-select {
+    height: 45px;
+  }
+  .custom-select:active, .custom-select:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #000;
+  }
+  .contact-wrap {
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+  .contact-wrap .col-form-label {
+    font-size: 14px;
+    color: black;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    padding: 0;
+  }
+  .contact-wrap .form, .contact-wrap .contact-info {
+    padding: 40px;
+  }
+  .contact-wrap .contact-info {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-wrap .contact-info ul li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-wrap .contact-info ul li .wrap-icon {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  .contact-wrap .form {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .contact-wrap .form h3 {
+    color: #35477d;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .contact-wrap .contact-info {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  .contact-wrap .contact-info h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  label.error {
+    font-size: 12px;
+    color: red;
+  }
+  #message {
+    resize: vertical;
+  }
+  #form-message-warning, #form-message-success {
+    display: none;
+  }
+  #form-message-warning {
+    color: #B90B0B;
+  }
+  #form-message-success {
+    color: #55A44E;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .submitting {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000;
+  }
+  .fondo1 {
+    background-image: url("/assets/backgrouond/juegos/xbox.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .contacto__botones {
+    display: flex;
+    justify-content: right;
+  }
+  .contacto__botones button {
+    margin-right: 5%;
   }
 }
 /************ TABLETS GRANDES *************************/
@@ -649,6 +1149,106 @@ a {
     align-items: center;
     width: 95vw;
   }
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .col-form-label {
+    color: #000;
+    font-size: 13px;
+  }
+  .btn1, .form-control, .custom-select {
+    height: 45px;
+  }
+  .custom-select:active, .custom-select:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #000;
+  }
+  .contact-wrap {
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+  .contact-wrap .col-form-label {
+    font-size: 14px;
+    color: black;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    padding: 0;
+  }
+  .contact-wrap .form, .contact-wrap .contact-info {
+    padding: 40px;
+  }
+  .contact-wrap .contact-info {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-wrap .contact-info ul li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-wrap .contact-info ul li .wrap-icon {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  .contact-wrap .form {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .contact-wrap .form h3 {
+    color: #35477d;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .contact-wrap .contact-info {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  .contact-wrap .contact-info h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  label.error {
+    font-size: 12px;
+    color: red;
+  }
+  #message {
+    resize: vertical;
+  }
+  #form-message-warning, #form-message-success {
+    display: none;
+  }
+  #form-message-warning {
+    color: #B90B0B;
+  }
+  #form-message-success {
+    color: #55A44E;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .submitting {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000;
+  }
+  .z2 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    opacity: 50%;
+    width: 100vw;
+    height: 15vh;
+  }
+  .z1 {
+    position: relative;
+    z-index: 2;
+  }
   #logo {
     width: 7vw;
     padding-top: 1%;
@@ -668,7 +1268,6 @@ a {
   }
   .novedades {
     display: flex;
-    border-bottom: solid #DBFE00 10px;
     background-color: #004280;
     justify-content: center;
   }
@@ -682,26 +1281,30 @@ a {
     width: 100vw;
     border-radius: 0%;
   }
+  section.container {
+    margin: 0 0 0 0 !important;
+    border: 0 0 0 0 !important;
+    max-width: 100vw;
+    justify-content: space-evenly;
+  }
+  div.container {
+    margin: 0 0 0 0 !important;
+    border: 0 0 0 0 !important;
+    max-width: 100vw;
+    justify-content: space-evenly;
+  }
   .destacados {
-    padding-top: 2%;
-    border-bottom: solid #DBFE00 10px;
+    padding: 1% 0 2% 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
   }
   .destacados__titulo {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-style: italic;
-    font-size: 22px;
+    font-size: 1.4rem;
     text-align: center;
-    color: black;
-  }
-  .destacados__imagenes {
-    display: grid;
-    grid-template-rows: repeat(5, 200px);
-    flex-direction: column;
+    color: #004280;
   }
   .destacados__producto {
-    max-height: 150px;
-    align-self: center;
-    justify-self: center;
+    height: 200px;
   }
   .videojuegos {
     background-image: url("/assets/backgrouond/juegos/xbox.jpg");
@@ -721,7 +1324,15 @@ a {
   }
   .producto__logo {
     width: 100vw;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .tarjeta__producto p {
+    font-style: italic;
+    font-size: xx-large;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    text-shadow: black;
   }
   .banner2 {
     width: 100%;
@@ -730,7 +1341,7 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: "roboto";
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: white;
     font-weight: bold;
     display: grid;
@@ -741,29 +1352,76 @@ a {
     font-size: 40px;
   }
   footer {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    bottom: auto;
+    transition: all 150ms;
+    width: 100%;
     color: white;
     padding: 20px 20px;
     background-color: #004280;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: italic;
-    justify-content: center;
-    align-items: center;
-    border-top: solid #DBFE00 5px;
+    text-transform: uppercase;
+    bottom: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   }
-  footer section {
-    grid-row: 1/2;
+  footer img {
+    padding: 0 1%;
+    height: 5vh;
+    margin-top: 50%;
   }
-  footer div {
+  footer img:hover {
+    border: solid #fff;
+    border-radius: 90px;
+  }
+  footer .btn {
+    width: 50VW !important;
+  }
+  footer .btn:hover {
+    color: #004280;
+  }
+  .redes-sociales {
     display: flex;
     justify-content: center;
   }
-  footer div img {
-    height: 5vh;
-    margin-top: 5px;
-    margin-left: 10px;
+  .filtros {
+    display: none;
+    visibility: hidden;
+  }
+  .filtros * {
+    display: none !important;
+    visibility: hidden;
+  }
+  .filtros div {
+    display: none !important;
+    visibility: hidden;
+  }
+  .tarjeta p {
+    font-style: italic;
+    font-size: xx-large;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    text-shadow: black;
+  }
+  .malla_productos {
+    margin: 0 0 0 0;
+  }
+  .contacto__botones {
+    display: flex;
+    justify-content: center;
+  }
+  .contacto__botones button {
+    margin-right: 5%;
+  }
+  .contacto {
+    background-image: url("/assets/backgrouond/juegos/xbox.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .info {
+    display: flex;
+    text-align: center;
+  }
+  .info button {
+    margin-right: 5%;
   }
 }
 /************ TABLETS Y CELULARES GRANDES*************************/
@@ -808,6 +1466,103 @@ a {
     align-items: center;
     width: 95vw;
   }
+  .col-form-label {
+    color: #000;
+    font-size: 13px;
+  }
+  .btn1, .form-control, .custom-select {
+    height: 45px;
+  }
+  .custom-select:active, .custom-select:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #000;
+  }
+  .contact-wrap {
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+  .contact-wrap .col-form-label {
+    font-size: 14px;
+    color: black;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    padding: 0;
+  }
+  .contact-wrap .form, .contact-wrap .contact-info {
+    padding: 40px;
+  }
+  .contact-wrap .contact-info {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-wrap .contact-info ul li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-wrap .contact-info ul li .wrap-icon {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  .contact-wrap .form {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .contact-wrap .form h3 {
+    color: #35477d;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .contact-wrap .contact-info {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  .contact-wrap .contact-info h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  label.error {
+    font-size: 12px;
+    color: red;
+  }
+  #message {
+    resize: vertical;
+  }
+  #form-message-warning, #form-message-success {
+    display: none;
+  }
+  #form-message-warning {
+    color: #B90B0B;
+  }
+  #form-message-success {
+    color: #55A44E;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .submitting {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000;
+  }
+  .z2 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    opacity: 50%;
+    width: 100vw;
+    height: 15vh;
+  }
+  .z1 {
+    position: relative;
+    z-index: 2;
+  }
   #logo {
     width: 7vw;
     padding-top: 1%;
@@ -827,7 +1582,6 @@ a {
   }
   .novedades {
     display: flex;
-    border-bottom: solid #DBFE00 10px;
     background-color: #004280;
     justify-content: center;
   }
@@ -841,26 +1595,30 @@ a {
     width: 100vw;
     border-radius: 0%;
   }
+  section.container {
+    margin: 0 0 0 0 !important;
+    border: 0 0 0 0 !important;
+    max-width: 100vw;
+    justify-content: space-evenly;
+  }
+  div.container {
+    margin: 0 0 0 0 !important;
+    border: 0 0 0 0 !important;
+    max-width: 100vw;
+    justify-content: space-evenly;
+  }
   .destacados {
-    padding-top: 2%;
-    border-bottom: solid #DBFE00 10px;
+    padding: 1% 0 2% 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
   }
   .destacados__titulo {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-style: italic;
-    font-size: 22px;
+    font-size: 1.4rem;
     text-align: center;
-    color: black;
-  }
-  .destacados__imagenes {
-    display: grid;
-    grid-template-rows: repeat(5, 200px);
-    flex-direction: column;
+    color: #004280;
   }
   .destacados__producto {
-    max-height: 150px;
-    align-self: center;
-    justify-self: center;
+    height: 200px;
   }
   .videojuegos {
     background-image: url("/assets/backgrouond/juegos/xbox.jpg");
@@ -880,7 +1638,15 @@ a {
   }
   .producto__logo {
     width: 100vw;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .tarjeta__producto p {
+    font-style: italic;
+    font-size: xx-large;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    text-shadow: black;
   }
   .banner2 {
     width: 100%;
@@ -889,7 +1655,7 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: "roboto";
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: white;
     font-weight: bold;
     display: grid;
@@ -900,29 +1666,76 @@ a {
     font-size: 40px;
   }
   footer {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    bottom: auto;
+    transition: all 150ms;
+    width: 100%;
     color: white;
     padding: 20px 20px;
     background-color: #004280;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: italic;
-    justify-content: center;
-    align-items: center;
-    border-top: solid #DBFE00 5px;
+    text-transform: uppercase;
+    bottom: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   }
-  footer section {
-    grid-row: 1/2;
+  footer img {
+    padding: 0 1%;
+    height: 5vh;
+    margin-top: 50%;
   }
-  footer div {
+  footer img:hover {
+    border: solid #fff;
+    border-radius: 90px;
+  }
+  footer .btn {
+    width: 50VW !important;
+  }
+  footer .btn:hover {
+    color: #004280;
+  }
+  .redes-sociales {
     display: flex;
     justify-content: center;
   }
-  footer div img {
-    height: 5vh;
-    margin-top: 5px;
-    margin-left: 10px;
+  .filtros {
+    display: none;
+    visibility: hidden;
+  }
+  .filtros * {
+    display: none !important;
+    visibility: hidden;
+  }
+  .filtros div {
+    display: none !important;
+    visibility: hidden;
+  }
+  .tarjeta p {
+    font-style: italic;
+    font-size: xx-large;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    text-shadow: black;
+  }
+  .malla_productos {
+    margin: 0 0 0 0;
+  }
+  .contacto__botones {
+    display: flex;
+    justify-content: center;
+  }
+  .contacto__botones button {
+    margin-right: 5%;
+  }
+  .contacto {
+    background-image: url("/assets/backgrouond/juegos/xbox.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .info {
+    display: flex;
+    text-align: center;
+  }
+  .info button {
+    margin-right: 5%;
   }
 }
 /************ CELULARES PEQUEÑOS  *************************/
@@ -967,6 +1780,103 @@ a {
     align-items: center;
     width: 95vw;
   }
+  .col-form-label {
+    color: #000;
+    font-size: 13px;
+  }
+  .btn1, .form-control, .custom-select {
+    height: 45px;
+  }
+  .custom-select:active, .custom-select:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #000;
+  }
+  .contact-wrap {
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+  .contact-wrap .col-form-label {
+    font-size: 14px;
+    color: black;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    padding: 0;
+  }
+  .contact-wrap .form, .contact-wrap .contact-info {
+    padding: 40px;
+  }
+  .contact-wrap .contact-info {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-wrap .contact-info ul li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .contact-wrap .contact-info ul li .wrap-icon {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 5px;
+  }
+  .contact-wrap .form {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .contact-wrap .form h3 {
+    color: #35477d;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .contact-wrap .contact-info {
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+  .contact-wrap .contact-info h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  label.error {
+    font-size: 12px;
+    color: red;
+  }
+  #message {
+    resize: vertical;
+  }
+  #form-message-warning, #form-message-success {
+    display: none;
+  }
+  #form-message-warning {
+    color: #B90B0B;
+  }
+  #form-message-success {
+    color: #55A44E;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .submitting {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000;
+  }
+  .z2 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    opacity: 50%;
+    width: 100vw;
+    height: 15vh;
+  }
+  .z1 {
+    position: relative;
+    z-index: 2;
+  }
   #logo {
     width: 7vw;
     padding-top: 1%;
@@ -986,7 +1896,6 @@ a {
   }
   .novedades {
     display: flex;
-    border-bottom: solid #DBFE00 10px;
     background-color: #004280;
     justify-content: center;
   }
@@ -1000,26 +1909,30 @@ a {
     width: 100vw;
     border-radius: 0%;
   }
+  section.container {
+    margin: 0 0 0 0 !important;
+    border: 0 0 0 0 !important;
+    max-width: 100vw;
+    justify-content: space-evenly;
+  }
+  div.container {
+    margin: 0 0 0 0 !important;
+    border: 0 0 0 0 !important;
+    max-width: 100vw;
+    justify-content: space-evenly;
+  }
   .destacados {
-    padding-top: 2%;
-    border-bottom: solid #DBFE00 10px;
+    padding: 1% 0 2% 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
   }
   .destacados__titulo {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-style: italic;
-    font-size: 22px;
+    font-size: 1.4rem;
     text-align: center;
-    color: black;
-  }
-  .destacados__imagenes {
-    display: grid;
-    grid-template-rows: repeat(5, 200px);
-    flex-direction: column;
+    color: #004280;
   }
   .destacados__producto {
-    max-height: 150px;
-    align-self: center;
-    justify-self: center;
+    height: 200px;
   }
   .videojuegos {
     background-image: url("/assets/backgrouond/juegos/xbox.jpg");
@@ -1039,7 +1952,15 @@ a {
   }
   .producto__logo {
     width: 100vw;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .tarjeta__producto p {
+    font-style: italic;
+    font-size: xx-large;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    text-shadow: black;
   }
   .banner2 {
     width: 100%;
@@ -1048,7 +1969,7 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: "roboto";
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: white;
     font-weight: bold;
     display: grid;
@@ -1059,30 +1980,75 @@ a {
     font-size: 40px;
   }
   footer {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    bottom: auto;
+    transition: all 150ms;
+    width: 100%;
     color: white;
     padding: 20px 20px;
     background-color: #004280;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-style: italic;
-    justify-content: center;
-    align-items: center;
-    border-top: solid #DBFE00 5px;
+    text-transform: uppercase;
+    bottom: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   }
-  footer section {
-    grid-row: 1/2;
+  footer img {
+    padding: 0 1%;
+    height: 5vh;
+    margin-top: 50%;
   }
-  footer div {
+  footer img:hover {
+    border: solid #fff;
+    border-radius: 90px;
+  }
+  footer .btn {
+    width: 50VW !important;
+  }
+  footer .btn:hover {
+    color: #004280;
+  }
+  .redes-sociales {
     display: flex;
     justify-content: center;
   }
-  footer div img {
-    height: 5vh;
-    margin-top: 5px;
-    margin-left: 10px;
+  .filtros {
+    display: none;
+    visibility: hidden;
   }
-}
-
-/*# sourceMappingURL=estilos.css.map */
+  .filtros * {
+    display: none !important;
+    visibility: hidden;
+  }
+  .filtros div {
+    display: none !important;
+    visibility: hidden;
+  }
+  .tarjeta p {
+    font-style: italic;
+    font-size: xx-large;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    text-shadow: black;
+  }
+  .malla_productos {
+    margin: 0 0 0 0;
+  }
+  .contacto__botones {
+    display: flex;
+    justify-content: center;
+  }
+  .contacto__botones button {
+    margin-right: 5%;
+  }
+  .contacto {
+    background-image: url("/assets/backgrouond/juegos/xbox.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .info {
+    display: flex;
+    text-align: center;
+  }
+  .info button {
+    margin-right: 5%;
+  }
+}/*# sourceMappingURL=estilos.css.map */

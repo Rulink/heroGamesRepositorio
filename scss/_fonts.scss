@@ -1,1 +1,9 @@
+@font-face {
+    font-family: hero;
+    src: url(/assets/fonts/hiJack.ttf);
+}
+
+
+
 $brand-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+$brand-title: hero;
